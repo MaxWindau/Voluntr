@@ -1,172 +1,165 @@
-body,
-        html {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .tooltip.right {
-            font-size: 15px !important;
-            white-space: nowrap !important;
-        }
-        
-        .tooltip.right .tooltip-inner {
-            background-color: #4DBCE9;
-            border-radius: 0px !important;
-        }
-        
-        .tooltip.right .tooltip-arrow {
-            border-right-color: #4DBCE9 !important;
-        }
-        /* Button-basiskleur */
-        
-        .btn-basis {
-            color: #ffffff !important;
-            background-color: #F18D05;
-            border-color: transparent;
-            margin-bottom: 8px !important;
-            ;
-        }
-        
-        .btn-basis:hover,
-        .btn-basis:focus,
-        .btn-basis:active,
-        .btn-basis.active,
-        .open .dropdown-toggle.btn-basis {
-            color: #ffffff !important;
-            background-color: #D87400;
-            border-color: transparent;
-        }
-        
-        .btn-basis:active,
-        .btn-basis.active,
-        .open .dropdown-toggle.btn-basis {
-            background-image: none;
-            color: white;
-        }
-        
-        .btn-basis.disabled,
-        .btn-basis[disabled],
-        fieldset[disabled] .btn-basis,
-        .btn-basis.disabled:hover,
-        .btn-basis[disabled]:hover,
-        fieldset[disabled] .btn-basis:hover,
-        .btn-basis.disabled:focus,
-        .btn-basis[disabled]:focus,
-        fieldset[disabled] .btn-basis:focus,
-        .btn-basis.disabled:active,
-        .btn-basis[disabled]:active,
-        fieldset[disabled] .btn-basis:active,
-        .btn-basis.disabled.active,
-        .btn-basis[disabled].active,
-        fieldset[disabled] .btn-basis.active {
-            background-color: #D87400;
-            border-color: #FFFFFF;
-            color: white !important;
-        }
-        
-        .btn-basis .badge {
-            color: white !important;
-            background-color: #F18D05;
-        }
-        
-        .label-basis {
-            background-color: #F18D05;
-            color: #ffffff !important;
-        }
-        
-        .label-basis[href]:hover,
-        .label-basis[href]:focus {
-            background-color: #D87400;
-            color: white !important;
-        }
-        /* Linkkleur */
-        /* unvisited link */
-        
-        a:link {
-            color: #F18D05;
-        }
-        /* visited link
-        
-        a:visited {
-            color: #F18D05;
-        }
-        /* mouse over link
-        
-        a:hover {
-            color: #D87400;
-        }
-        /* selected link */
-        
-        a:active {
-            color: #D87400;
-        }
-        
-        .header {
-            width: 100%;
-            height: 55px;
-            background-color: #F18D05;
-            color: white;
-            overflow: hidden;
-            padding: 11px 0px;
-            box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
-            position: fixed;
-            z-index: 99;
-            top: 0;
-            left: 0;
-        }
-        
-        .container-white {
-            padding-top: 75px;
-            padding-bottom: 50px;
-            background-color: white !important;
-        }
-        
-        .container-background {
-            background-color: #fafafa;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%
-        }
-        .support {
-            padding-top:75px;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        
-        .progress {
-            background: rgba(255, 255, 255, 1);
-            border: 0px solid rgba(245, 245, 245, 1);
-            border-radius: 4px;
-            height: 22px;
-        }
-        
-        .progress-bar-basis {
-            background: #F18D05;
-        }
-        
-        .progress-striped .progress-bar-basis {
-            background-color: #F18D05;
-            background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent)));
-            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            background-size: 40px 40px;
-        }
-        
-        td {
-            border-top: none !important;
-            width: 100%;
-        }
-        
-        .row-dashboard {
-            margin-bottom: 20px;
-        }
+/*
+//  Author: Max Windau / Tim van Dijk
+//  E-mail: Max.Windau@gmail.com
+*/
+
+/***************/
+/* HTML & BODY */
+/***************/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/***********************/
+/* FONTS, TEXT & COLOR */
+/***********************/
+
+/* Main font */
+h1,h2,h3,h4,h5,h6,p,b,u,i {
+    font-family: Helvetica Neue, sans-serif;
+}
+/* Headers margin */
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Link colors */
+a:link {
+    color: #F18D05;
+}
+a:visited {
+    color: #F18D05;
+}
+a:hover {
+    color: #D87400;
+}
+a:active {
+    color: #D87400;
+}
+
+/********/
+/* DIVS */
+/********/
+
+.header {
+    width: 100%;
+    height: 55px;
+    background-color: #F18D05;
+    color: white;
+    overflow: hidden;
+    padding: 11px 0px;
+    box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}
+.container-white {
+    padding-top: 75px;
+    padding-bottom: 50px;
+    background-color: white !important;
+}
+.container-background {
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+.support {
+    padding-top: 75px;
+}
+
+
+/***********/
+/* BUTTONS */
+/***********/
+
+/* btn-basis: orange button with 5% darker hover */
+.btn-basis {
+    color: #ffffff !important;
+    background-color: #F18D05;
+    border-color: transparent;
+    margin-bottom: 8px !important;
+}
+.btn-basis:hover, .btn-basis:focus, .btn-basis:active, .btn-basis.active, .open .dropdown-toggle.btn-basis {
+    color: #ffffff !important;
+    background-color: #D87400;
+    border-color: transparent;
+}
+.btn-basis:active, .btn-basis.active, .open .dropdown-toggle.btn-basis {
+    color: white !important;
+}
+.btn-basis.disabled, .btn-basis[disabled], fieldset[disabled] .btn-basis, .btn-basis.disabled:hover, .btn-basis[disabled]:hover, fieldset[disabled] .btn-basis:hover, .btn-basis.disabled:focus, .btn-basis[disabled]:focus, fieldset[disabled] .btn-basis:focus, .btn-basis.disabled:active, .btn-basis[disabled]:active, fieldset[disabled] .btn-basis:active, .btn-basis.disabled.active, .btn-basis[disabled].active, fieldset[disabled] .btn-basis.active {
+    background-color: #D87400;
+    border-color: #FFFFFF;
+    color: white !important;
+}
+.btn-basis .badge {
+    color: white !important;
+    background-color: #F18D05;
+}
+.label-basis {
+    background-color: #F18D05;
+    color: #ffffff !important;
+}
+.label-basis[href]:hover, .label-basis[href]:focus {
+    background-color: #D87400;
+    color: white !important;
+}
+
+/**********/
+/* TABLES */
+/**********/
+
+td {
+    border-top: none !important;
+    width: 100%;
+}
+.row-dashboard {
+    margin-bottom: 20px;
+}
+
+/***********************/
+/* BOOTSTRAP OVERRIDES */
+/***********************/
+
+/* Tooltip Voluntr */
+.tooltip.right {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+}
+.tooltip.right .tooltip-inner {
+    background-color: #4DBCE9;
+    border-radius: 0px !important;
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #4DBCE9 !important;
+}
+
+/* Progress-bar Voluntr */
+.progress {
+    background: rgba(255, 255, 255, 1);
+    border: 0px solid rgba(245, 245, 245, 1);
+    border-radius: 4px;
+    height: 22px;
+}
+.progress-bar-basis {
+    background: #F18D05;
+}
+.progress-striped .progress-bar-basis {
+    background-color: #F18D05;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent)));
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+
+
+
+
