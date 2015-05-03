@@ -1,231 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+    <head>
+        <!-- 3 meta tags (*must* come first in the head!) -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- End 3 meta tags -->
+        
+        <title>Voluntr</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-social.css" rel="stylesheet">
+        
+        <!-- Voluntr CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        
+        <!-- Font Awesome 4.3.0 -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-</head>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+    </head>
 
-<body>
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .tooltip.right {
-            font-size: 15px !important;
-            white-space: nowrap !important;
-        }
-        
-        .tooltip.right .tooltip-inner {
-            background-color: #4DBCE9;
-            border-radius: 0px !important;
-        }
-        
-        .tooltip.right .tooltip-arrow {
-            border-right-color: #4DBCE9 !important;
-        }
-        /* Button-basiskleur */
-        
-        .btn-basis {
-            color: #ffffff !important;
-            background-color: #F18D05;
-            border-color: transparent;
-            margin-bottom: 8px !important;
-            ;
-        }
-        
-        .btn-basis:hover,
-        .btn-basis:focus,
-        .btn-basis:active,
-        .btn-basis.active,
-        .open .dropdown-toggle.btn-basis {
-            color: #ffffff !important;
-            background-color: #D87400;
-            border-color: transparent;
-        }
-        
-        .btn-basis:active,
-        .btn-basis.active,
-        .open .dropdown-toggle.btn-basis {
-            background-image: none;
-            color: white;
-        }
-        
-        .btn-basis.disabled,
-        .btn-basis[disabled],
-        fieldset[disabled] .btn-basis,
-        .btn-basis.disabled:hover,
-        .btn-basis[disabled]:hover,
-        fieldset[disabled] .btn-basis:hover,
-        .btn-basis.disabled:focus,
-        .btn-basis[disabled]:focus,
-        fieldset[disabled] .btn-basis:focus,
-        .btn-basis.disabled:active,
-        .btn-basis[disabled]:active,
-        fieldset[disabled] .btn-basis:active,
-        .btn-basis.disabled.active,
-        .btn-basis[disabled].active,
-        fieldset[disabled] .btn-basis.active {
-            background-color: #D87400;
-            border-color: #FFFFFF;
-            color: white !important;
-        }
-        
-        .btn-basis .badge {
-            color: white !important;
-            background-color: #F18D05;
-        }
-        
-        .label-basis {
-            background-color: #F18D05;
-            color: #ffffff !important;
-        }
-        
-        .label-basis[href]:hover,
-        .label-basis[href]:focus {
-            background-color: #D87400;
-            color: white !important;
-        }
-        /* Linkkleur */
-        /* unvisited link
-        
-        a:link {
-            color: #F18D05;
-        }
-        /* visited link
-        
-        a:visited {
-            color: #F18D05;
-        }
-        /* mouse over link
-        
-        a:hover {
-            color: #D87400;
-        }
-        /* selected link */
-        
-        a:active {
-            color: #D87400;
-        }
-        
-        .header {
-            width: 100%;
-            height: 55px;
-            background-color: #F18D05;
-            color: white;
-            overflow: hidden;
-            padding: 11px 0px;
-            box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
-            position: fixed;
-            z-index: 99;
-            top: 0;
-            left: 0;
-        }
-        
-        .container-white {
-            padding-top: 75px;
-            padding-bottom: 50px;
-            background-color: white !important;
-        }
-        
-        .container-background {
-            background-color: #fafafa;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%
-        }
-        .support {
-            padding-top:75px;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        
-        .progress {
-            background: rgba(255, 255, 255, 1);
-            border: 0px solid rgba(245, 245, 245, 1);
-            border-radius: 4px;
-            height: 22px;
-        }
-        
-        .progress-bar-basis {
-            background: #F18D05;
-        }
-        
-        .progress-striped .progress-bar-basis {
-            background-color: #F18D05;
-            background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent)));
-            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            background-size: 40px 40px;
-        }
-        
-        td {
-            border-top: none !important;
-            width: 100%;
-        }
-        
-        .row-dashboard {
-            margin-bottom: 20px;
-        }
-    </style>
-    <div class="container-background">
-        <!-- Header -->
-        <div class="header">
-            <div class="col-sm-4 hidden-xs" style="text-align:left;margin-top:3px;">
-                <h3 style="font-weight:200"><div style="margin-top:-1px;float:left;margin-right:8px;"><i class="fa fa-dashboard"></i></div> Dashboard</h3>
-            </div>
-            <div class="col-sm-4" style="text-align:center;">
-                <h2><i class="fa fa-puzzle-piece"></i>Voluntr</h2>
-            </div>
-            <div class="col-sm-4 hidden-xs" style="text-align:right;">
-                <h5>Molenhoekdag <span class="caret"></span>&nbsp;
+    <body>
+        <div class="container-background">
+            <!-- HEADER START -->
+            <div class="header">
+                <!-- Header LEFT -->
+                <div class="header-left col-sm-4 hidden-xs" style="text-align:left;margin-top:3px;">
+                    <h3 style="font-weight:200">
+                        <div style="margin-top:-1px;float:left;margin-right:8px;">
+                            <i class="fa fa-dashboard"></i>
+                        </div>
+                        Dashboard
+                    </h3>
+                </div>
+                
+                <!-- Header CENTER -->
+                <div class="header-center col-xs-12 col-sm-4" style="text-align:center;">
+                    <h2>
+                        <i class="fa fa-puzzle-piece"></i>
+                        Voluntr
+                    </h2>
+                </div>
+                
+                <!-- Header RIGHT -->
+                <div class="header-right col-sm-4 hidden-xs" style="text-align:right;">
+                    <h5>
+                        <!-- Organisation: name -->
+                        Molenhoekdag <span class="caret"></span>&nbsp;
+                        <!-- Organisation: logo -->
                         <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
                     </h5>
-
+                </div>
             </div>
-        </div>
-        <!-- Content -->
-
-
-        <!-- NIEUW -->
-        <div class="hidden-xs container-white">
-            <div class="row">
+            <!-- HEADER END -->
+            
+            <!-- DESKTOP CONTENT START -->
+            <div class="container-white hidden-xs row">
                 <div class="col-xs-12">
-
-
-
-                    <!-- KOLOM 1 -->
+                        
+                    <!-- COLUMN 1 START -->
                     <div class="col-sm-6 col-md-4">
                         <div class="row">
+
+                            <!-- Voortgang BLOCK START -->
                             <div class="col-sm-12">
+                                <!-- Block: header -->
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <h3>Voortgang</h3>
@@ -236,6 +82,7 @@
                                 </div>
                                 <hr style="margin-top:8px;margin-bottom:10px;">
 
+                                <!-- Block: content -->
                                 <b>Capaciteit</b>
                                 <p>Hoeveel van de benodigde capaciteit is beschikbaar?</p>
                                 <div class="progress progress-striped">
@@ -248,8 +95,11 @@
                                     <div class="progress-bar progress-bar-basis" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
                                 </div>
                             </div>
+                            <!-- Voortgang BLOCK END -->
 
+                            <!-- Upcoming BLOCK START -->
                             <div class="col-sm-12">
+                                <!-- Block: header -->
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <h3>Upcoming</h3>
@@ -260,21 +110,26 @@
                                 </div>
                                 <hr style="margin-top:8px;margin-bottom:10px;">
 
+                                <!-- Block: content -->
                                 <b>Maandag 4 mei</b>
                                 <p><i class="fa fa-envelope"></i> Mail naar vrijwilligers van vorig jaar</p>
                                 <b>Zaterdag 1 september</b>
                                 <p><i class="fa fa-glass"></i> Evenementdatum</p>
                             </div>
+                            <!-- Upcoming BLOCK END -->
+
                         </div>
-                    </div>
+                    </div> 
+                    <!-- COLUMN 1 END -->
 
 
-
-
-                    <!-- KOLOM 2 -->
+                    <!-- COLUMN 2 START -->
                     <div class="col-sm-6 col-md-4">
                         <div class="row">
+
+                            <!-- Te doen BLOCK START -->
                             <div class="col-sm-12">
+                                <!-- Block: header -->
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <h3>Te doen</h3>
@@ -285,47 +140,59 @@
                                 </div>
                                 <hr style="margin-top:8px;margin-bottom:10px;">
 
-                                <!-- To-do accordion -->
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <!-- Telefoonverkeer -->
+                                <!-- Block: content -->
+                                <div class="panel-group" id="tedoen" role="tablist" aria-multiselectable="true">
+
+                                    <!-- Telefoonverkeer START -->
                                     <div class="panel panel-default">
+                                        <!-- Telefoonverkeer: header -->
                                         <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(187,86,77); color:white;">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <a data-toggle="collapse" data-parent="#tedoen" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                     <h4>
                                                          Telefoonverkeer <i class="fa fa-phone-square pull-right"></i>
                                                     </h4>
                                             </a>
                                             </h4>
                                         </div>
+                                        <!-- Telefoonverkeer: content -->
                                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
                                                 <i class="fa fa-arrow-right"></i> 4 vrijwilligers terugbellen
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Mailverkeer -->
+                                    <!-- Telefoonverkeer END -->
+
+                                    <!-- Mailverkeer START -->
                                     <div class="panel panel-default">
+                                        <!-- Mailverkeer: header -->
                                         <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(132,190,223); color:white;">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                                <a data-toggle="collapse" data-parent="#tedoen" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                                                     <h4>
                                                         Mailverkeer<i class="fa fa-envelope pull-right"></i>
                                                     </h4>
-                                            </a>
+                                                </a>
                                             </h4>
                                         </div>
+                                        <!-- Mailverkeer: content -->
                                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
                                                 <i class="fa fa-arrow-right"></i> Informatiemail 'tevreden' verzenden
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Mailverkeer END -->
+
                                 </div>
 
                             </div>
-                            <!-- Evenementgegevens -->
+                            <!-- Te doen BLOCK END -->
+
+                            <!-- Evenementgegevens BLOCK START -->
                             <div class="col-sm-12">
+                                <!-- Evenementgegevens: header -->
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <h3>Evenementgegevens</h3>
@@ -335,22 +202,27 @@
                                     </div>
                                 </div>
                                 <hr style="margin-top:8px;margin-bottom:10px;">
+
+                                <!-- Evenementgegevens: content -->
                                 <address>
                                     <b>Datum:</b> 2 en 3 september 2015<br />
                                     <b>Locatie:</b> Meulenveld, Molenhoek
                                 </address>
-
-
+                                <!-- Google Maps -->
                                 <iframe style="width:100%;height:180px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Meulenveld%2C%20Molenhoek%2C%20Niederlande&key=AIzaSyAZFesjPfJwQoHSIQZOENu1e-jRUBO9aS0"></iframe>
                             </div>
+                            <!-- Evenementgegevens BLOCK END -->
+
                         </div>
                     </div>
+                    <!-- COLUMN 2 END -->
 
-                    <!-- KOLOM 3 -->
+
+                    <!-- COLUMN 3 START -->
                     <div class="col-sm-12 col-md-4">
 
-
-                        <!-- Acties -->
+                        <!-- Acties BLOCK START -->
+                        <!-- Acties: header -->
                         <div class="row">
                             <div class="col-sm-8">
                                 <h3>Acties</h3>
@@ -360,7 +232,10 @@
                             </div>
                         </div>
                         <hr style="margin-top:8px;margin-bottom:10px;">
+
+                        <!-- Acties: content -->
                         <div class="row">
+
                             <!-- Vrijwilligersbeheer -->
                             <div class="col-sm-6 col-md-12">
                                 <a class="btn btn-basis" style="width:100%;">
@@ -374,6 +249,7 @@
                                     </div>
                                 </a>
                             </div>
+
                             <!-- Takenbeheer -->
                             <div class="col-sm-6 col-md-12">
                                 <a class="btn btn-basis" style="width:100%;">
@@ -387,6 +263,7 @@
                                     </div>
                                 </a>
                             </div>
+
                             <!-- Inzet -->
                             <div class="col-sm-6 col-md-12">
                                 <a class="btn btn-basis" style="width:100%;">
@@ -400,63 +277,76 @@
                                     </div>
                                 </a>
                             </div>
+
                         </div>
+                        <!-- Acties BLOCK END -->
+
                     </div>
+                    <!-- COLUMN 3 END -->
+                        
                 </div>
             </div>
-        </div>
-        <div class="support visible-xs col-xs-12">
-            <center>
-                <h1>
-                    <br /><i class="fa fa-life-ring" style="font-size:80px;"></i><br /><br />Ondersteuning
-                </h1>
-                <h4>
-                    <br />
-                    <p>Op dit moment worden mobiele apparaten (nog) niet ondersteund door Voluntr.
-                        Je kunt natuurlijk altijd op een groter scherm met Voluntr werken.</p>
-                </h4>
-                <h3 style="color:#aaa;"><br />Het spijt ons.</h3>
-            </center>
+            <!-- DESKTOP CONTENT END -->
+            
+            <!-- MOBILE CONTENT START -->
+            <div class="support visible-xs col-xs-12">
+                <center>
+                    <h1>
+                        <br />
+                        <i class="fa fa-life-ring" style="font-size:80px;"></i>
+                        <br /><br />Ondersteuning
+                    </h1>
+                    <h4>
+                        <br />
+                        <p>Op dit moment worden mobiele apparaten (nog) niet ondersteund door Voluntr.
+                            Je kunt natuurlijk altijd op een groter scherm met Voluntr werken.</p>
+                    </h4>
+                    <h3 style="color:#aaa;"><br />Het spijt ons.</h3>
+                </center>
 
-        </div>
-        <!-- EIND NIEUW -->
-
-        <div class="col-sm-12 hidden-xs" style="background-color:#fafafa;height:90px;padding:15px;">
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-1">
-                    <h2 style="color:#f18D05;">Voluntr</h2>
-                    <h4>Een slogan zegt alles.</h4>
-
-                </div>
-                <div class="col-sm-3">
-                    <h5>Over ons</h5>
-                    <h5>Privacy</h5>
-                    <h5>Algemene voorwaarden</h5>
-
-                </div>
-                <div class="col-sm-3">
-                    <br />
-                    <h3 style="color:#eee !important;text-align:right;">Made with <i class="fa fa-heart"></i> in Nijmegen</h3>
+            </div>
+            <!-- MOBILE CONTENT END -->
+            
+            <!-- FOOTER START -->
+            <div class="col-sm-12 hidden-xs" style="background-color:#fafafa;height:90px;padding:15px;">
+                <div class="row">
+                    
+                    <!-- Footer LEFT -->
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <h2 style="color:#f18D05;">Voluntr</h2>
+                        <h4>Een slogan zegt alles.</h4>
+                    </div>
+                    
+                    <!-- Footer CENTER -->
+                    <div class="col-sm-3">
+                        <h5>Over ons</h5>
+                        <h5>Privacy</h5>
+                        <h5>Algemene voorwaarden</h5>
+                    </div>
+                    
+                    <!-- Footer RIGHT -->
+                    <div class="col-sm-3">
+                        <br />
+                        <h3 style="color:#eee !important;text-align:right;">Made with <i class="fa fa-heart"></i> in Nijmegen</h3>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
+            <!-- FOOTER END -->
 
-
-
-
-
-
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        </script>
-    </div>
-</body>
-
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            
+            <!-- Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            
+            <!-- Bootstrap: tooltip -->
+            <script type="text/javascript">
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+            </script>
+            
+        </div> <!-- background div //-->
+    </body>
 </html>
