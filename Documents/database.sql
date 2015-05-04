@@ -1,6 +1,6 @@
 CREATE TABLE Gebruikers (
-    id              int(10)             NOT NULL        AUTO_INCREMENT,
-	password		char(60)		NOT NULL,
+    id              int(10)         NOT NULL        AUTO_INCREMENT,
+    password        char(60)        NOT NULL,
     voornaam        varchar(50)     NOT NULL,
     tussenvoegsel   varchar(15),
     achternaam      varchar(50)     NOT NULL,
@@ -13,7 +13,6 @@ CREATE TABLE Gebruikers (
     toevoegsel      varchar(20),
     postcode        varchar(10)     NOT NULL,
     PRIMARY KEY (id),
-	INDEX idxId (id),
     UNIQUE (email),
     CONSTRAINT checkLand CHECK (land IN ('Nederland', 'Duitsland', 'Belgie'))
 );
