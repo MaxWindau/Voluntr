@@ -28,13 +28,13 @@
     </head>
 
     <body>
-        <div class="container-background">
+        <div class="cont-background">
             <!-- HEADER START -->
             <div class="header">
                 <!-- Header LEFT -->
-                <div class="header-left col-sm-4 hidden-xs" style="text-align:left;margin-top:3px;">
+                <div class="left col-sm-4 hidden-xs" style="">
                     <h3 style="font-weight:200">
-                        <div style="margin-top:-1px;float:left;margin-right:8px;">
+                        <div class="icon">
                             <i class="fa fa-dashboard"></i>
                         </div>
                         Dashboard
@@ -42,7 +42,7 @@
                 </div>
                 
                 <!-- Header CENTER -->
-                <div class="header-center col-xs-12 col-sm-4" style="text-align:center;">
+                <div class="center col-xs-12 col-sm-4">
                     <h2>
                         <i class="fa fa-puzzle-piece"></i>
                         Voluntr
@@ -50,7 +50,7 @@
                 </div>
                 
                 <!-- Header RIGHT -->
-                <div class="header-right col-sm-4 hidden-xs" style="text-align:right;">
+                <div class="right col-sm-4 hidden-xs">
                     <h5>
                         <!-- Organisation: name -->
                         Molenhoekdag <span class="caret"></span>&nbsp;
@@ -62,176 +62,175 @@
             <!-- HEADER END -->
             
             <!-- DESKTOP CONTENT START -->
-            <div class="container-white hidden-xs row">
-                <div class="col-xs-12">
-                        
-                    <!-- COLUMN 1 START -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="row">
-
-                            <!-- Voortgang BLOCK START -->
-                            <div class="col-sm-12">
-                                <!-- Block: header -->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h3>Voortgang</h3>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h3 style="color:#aaa;text-align:right;">48%</h3>
-                                    </div>
-                                </div>
-                                <hr style="margin-top:8px;margin-bottom:10px;">
-
-                                <!-- Block: content -->
-                                <b>Capaciteit</b>
-                                <p>Hoeveel van de benodigde capaciteit is beschikbaar?</p>
-                                <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-basis" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                </div>
-
-                                <b>Voortgangsonderdeel 2</b>
-                                <p>Toelichting op dit onderdeel</p>
-                                <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-basis" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                                </div>
-                            </div>
-                            <!-- Voortgang BLOCK END -->
-
-                            <!-- Upcoming BLOCK START -->
-                            <div class="col-sm-12">
-                                <!-- Block: header -->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h3>Upcoming</h3>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h3 style="color:#aaa;text-align:right;"></h3>
-                                    </div>
-                                </div>
-                                <hr style="margin-top:8px;margin-bottom:10px;">
-
-                                <!-- Block: content -->
-                                <b>Maandag 4 mei</b>
-                                <p><i class="fa fa-envelope"></i> Mail naar vrijwilligers van vorig jaar</p>
-                                <b>Zaterdag 1 september</b>
-                                <p><i class="fa fa-glass"></i> Evenementdatum</p>
-                            </div>
-                            <!-- Upcoming BLOCK END -->
-
-                        </div>
-                    </div> 
-                    <!-- COLUMN 1 END -->
-
-
-                    <!-- COLUMN 2 START -->
-                    <div class="col-sm-6 col-md-4">
-                        <div class="row">
-
-                            <!-- Te doen BLOCK START -->
-                            <div class="col-sm-12">
-                                <!-- Block: header -->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h3>Te doen</h3>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h3 style="color:#aaa;text-align:right;">2</h3>
-                                    </div>
-                                </div>
-                                <hr style="margin-top:8px;margin-bottom:10px;">
-
-                                <!-- Block: content -->
-                                <div class="panel-group" id="tedoen" role="tablist" aria-multiselectable="true">
-
-                                    <!-- Telefoonverkeer START -->
-                                    <div class="panel panel-default">
-                                        <!-- Telefoonverkeer: header -->
-                                        <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(187,86,77); color:white;">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#tedoen" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <h4>
-                                                         Telefoonverkeer <i class="fa fa-phone-square pull-right"></i>
-                                                    </h4>
-                                            </a>
-                                            </h4>
-                                        </div>
-                                        <!-- Telefoonverkeer: content -->
-                                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <i class="fa fa-arrow-right"></i> 4 vrijwilligers terugbellen
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Telefoonverkeer END -->
-
-                                    <!-- Mailverkeer START -->
-                                    <div class="panel panel-default">
-                                        <!-- Mailverkeer: header -->
-                                        <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(132,190,223); color:white;">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#tedoen" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                                                    <h4>
-                                                        Mailverkeer<i class="fa fa-envelope pull-right"></i>
-                                                    </h4>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <!-- Mailverkeer: content -->
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <i class="fa fa-arrow-right"></i> Informatiemail 'tevreden' verzenden
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Mailverkeer END -->
-
-                                </div>
-
-                            </div>
-                            <!-- Te doen BLOCK END -->
-
-                            <!-- Evenementgegevens BLOCK START -->
-                            <div class="col-sm-12">
-                                <!-- Evenementgegevens: header -->
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h3>Evenementgegevens</h3>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h3 style="color:#aaa;text-align:right;"></h3>
-                                    </div>
-                                </div>
-                                <hr style="margin-top:8px;margin-bottom:10px;">
-
-                                <!-- Evenementgegevens: content -->
-                                <address>
-                                    <b>Datum:</b> 2 en 3 september 2015<br />
-                                    <b>Locatie:</b> Meulenveld, Molenhoek
-                                </address>
-                                <!-- Google Maps -->
-                                <iframe style="width:100%;height:180px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Meulenveld%2C%20Molenhoek%2C%20Niederlande&key=AIzaSyAZFesjPfJwQoHSIQZOENu1e-jRUBO9aS0"></iframe>
-                            </div>
-                            <!-- Evenementgegevens BLOCK END -->
-
-                        </div>
-                    </div>
-                    <!-- COLUMN 2 END -->
-
-
-                    <!-- COLUMN 3 START -->
-                    <div class="col-sm-12 col-md-4">
-
-                        <!-- Acties BLOCK START -->
-                        <!-- Acties: header -->
-                        <div class="row">
+            <div class="cont-white hidden-xs">
+                             
+                <!-- COLUMN 1 START -->
+                <div class="col-sm-6 col-md-4">
+                    
+                    <!-- Voortgang BLOCK START -->
+                    <div class="block">
+                        <!-- Block: header -->
+                        <div class="block-header row">
                             <div class="col-sm-8">
-                                <h3>Acties</h3>
+                                <h3 class="left">Voortgang</h3>
                             </div>
                             <div class="col-sm-4">
-                                <h3 style="color:#aaa;text-align:right;"></h3>
+                                <h3 class="right">48%</h3>
                             </div>
                         </div>
-                        <hr style="margin-top:8px;margin-bottom:10px;">
+                        <div class="block-border col-xs-12"></div>
+
+                        <!-- Block: content -->
+                        <b>Capaciteit</b>
+                        <p>Hoeveel van de benodigde capaciteit is beschikbaar?</p>
+                        <div class="progress progress-striped">
+                            <div class="progress-bar progress-bar-basis" role="progressbar" style="width: 80%;"></div>
+                        </div>
+
+                        <b>Voortgangsonderdeel 2</b>
+                        <p>Toelichting op dit onderdeel</p>
+                        <div class="progress progress-striped">
+                            <div class="progress-bar progress-bar-basis" role="progressbar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <!-- Voortgang BLOCK END -->
+
+                    <!-- Upcoming BLOCK START -->
+                    <div class="block">
+                        <!-- Block: header -->
+                        <div class="block-header row">
+                            <div class="col-sm-8">
+                                <h3 class="left">Upcoming</h3>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3 class="right">48%</h3>
+                            </div>
+                        </div>
+                        <div class="block-border col-xs-12"></div>
+
+                        <!-- Block: content -->
+                        <b>Maandag 4 mei</b>
+                        <p><i class="fa fa-envelope"></i> Mail naar vrijwilligers van vorig jaar</p>
+                        <b>Zaterdag 1 september</b>
+                        <p><i class="fa fa-glass"></i> Evenementdatum</p>
+                    </div>
+                    <!-- Upcoming BLOCK END -->
+
+                </div> 
+                <!-- COLUMN 1 END -->
+
+
+                <!-- COLUMN 2 START -->
+                <div class="col-sm-6 col-md-4">
+
+                    <!-- Te doen BLOCK START -->
+                    <div class="block">
+                        <!-- Block: header -->
+                        <div class="block-header row">
+                            <div class="col-sm-8">
+                                <h3 class="left">Evenementgegevens</h3>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3 class="right"></h3>
+                            </div>
+                        </div>
+                        <div class="block-border col-xs-12"></div>
+
+                        <!-- Block: content -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="panel-group" id="tedoen" role="tablist" aria-multiselectable="true">
+
+                                <!-- Telefoonverkeer START -->
+                                <div class="panel panel-default">
+                                    <!-- Telefoonverkeer: header -->
+                                    <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(187,86,77); color:white;">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#tedoen" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <h4>
+                                                     Telefoonverkeer <i class="fa fa-phone-square pull-right"></i>
+                                                </h4>
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <!-- Telefoonverkeer: content -->
+                                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <i class="fa fa-arrow-right"></i> 4 vrijwilligers terugbellen
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Telefoonverkeer END -->
+
+                                <!-- Mailverkeer START -->
+                                <div class="panel panel-default">
+                                    <!-- Mailverkeer: header -->
+                                    <div class="panel-heading" role="tab" id="headingOne" style="background-color:rgb(132,190,223); color:white;">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#tedoen" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                                <h4>
+                                                    Mailverkeer<i class="fa fa-envelope pull-right"></i>
+                                                </h4>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <!-- Mailverkeer: content -->
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <i class="fa fa-arrow-right"></i> Informatiemail 'tevreden' verzenden
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Mailverkeer END -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Te doen BLOCK END -->
+
+                    <!-- Evenementgegevens BLOCK START -->
+                    <div class="block">
+                        <!-- Block: header -->
+                        <div class="block-header row">
+                            <div class="col-sm-8">
+                                <h3 class="left">Evenementgegevens</h3>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3 class="right"></h3>
+                            </div>
+                        </div>
+                        <div class="block-border col-xs-12"></div>
+
+                        <!-- Evenementgegevens: content -->
+                        <address>
+                            <b>Datum:</b> 2 en 3 september 2015<br />
+                            <b>Locatie:</b> Meulenveld, Molenhoek
+                        </address>
+                        <!-- Google Maps -->
+                        <iframe style="width:100%;height:180px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Meulenveld%2C%20Molenhoek%2C%20Niederlande&key=AIzaSyAZFesjPfJwQoHSIQZOENu1e-jRUBO9aS0"></iframe>
+                    </div>
+                    <!-- Evenementgegevens BLOCK END -->
+
+                </div>
+                <!-- COLUMN 2 END -->
+
+
+                <!-- COLUMN 3 START -->
+                <div class="col-sm-12 col-md-4">
+
+                    <!-- Acties BLOCK START -->
+                    <div class="block">
+                        <!-- Block: header -->
+                        <div class="block-header row">
+                            <div class="col-sm-8">
+                                <h3 class="left">Acties</h3>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3 class="right"></h3>
+                            </div>
+                        </div>
+                        <div class="block-border col-xs-12"></div>
 
                         <!-- Acties: content -->
                         <div class="row">
@@ -279,12 +278,13 @@
                             </div>
 
                         </div>
-                        <!-- Acties BLOCK END -->
-
                     </div>
-                    <!-- COLUMN 3 END -->
-                        
+                    <!-- Acties BLOCK END -->
+
                 </div>
+                <!-- COLUMN 3 END -->
+                        
+                
             </div>
             <!-- DESKTOP CONTENT END -->
             
