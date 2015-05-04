@@ -351,16 +351,22 @@
             
             <!-- Menu collapse script (jQuery) -->
             <script type="text/javascript">
-                $( ".menu-collapse" ).hover(function() {
-  $( ".menu" ).slideDown( "300", function() {
-    // Animation complete.
-  });
-});
-                $( ".menu-listener" ).hover(function() {
-  $( ".menu" ).slideUp( "300", function() {
-    // Animation complete.
-  });
-});
+                $( ".menu-collapse" ).hover(function() {          
+                    $( ".menu" ).slideDown( "100", function() {
+                        // Animation complete.
+                    });               
+                });
+                $( ".menu-listener" ).click(function() {
+                    $( ".menu" ).slideUp( "100", function() {
+                        // Animation complete.
+                    });
+                });
+                $( ".header" ).click(function() {
+                    // Needs to be fine-tuned
+                    $( ".menu" ).slideUp( "100", function() {
+                        setInterval(1000);
+                    });
+                });
             </script>
             
             <!-- Bootstrap -->
