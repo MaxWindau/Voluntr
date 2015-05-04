@@ -185,6 +185,7 @@ a:active {
     border-color: #F18D05;
     border-bottom:3px solid #F18D05;
     border-radius: 0px !important;
+    padding-bottom:3px;
 }
 .btn-menu:active, .btn-menu.active, .open .dropdown-toggle.btn-menu {
     color: white !important;
