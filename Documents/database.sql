@@ -39,7 +39,7 @@ CREATE TABLE Inschrijving (
     type            varchar(20)     NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (id) REFERENCES Gebruikers(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam), ON UPDATE NO ACTION ON DELETE NO ACTION
+    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION,
     CONSTRAINT checkLand CHECK (land IN ('Vrijwilliger', 'Organisator'))
 );
 
@@ -66,6 +66,6 @@ CREATE TABLE GebruikerTaak (
     taaknaam        varchar(80)     NOT NULL,
     moment          date            NOT NULL,
     PRIMARY KEY (id, evenementnaam, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTOIN ON DELETE NO ACTION
+    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
     
