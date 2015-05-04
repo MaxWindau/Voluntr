@@ -18,7 +18,7 @@
         
         <!-- Font Awesome 4.3.0 -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
-
+        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
     <body>
         <div class="container">
             <!-- HEADER START -->
-            <div class="header">
+            <div class="header menu-collapse">
                 <!-- Header LEFT -->
                 <div class="left col-sm-4 hidden-xs" style="">
                     <h3 style="font-weight:200">
@@ -58,17 +58,23 @@
                         <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
                     </h5>
                 </div>
+                
+                
             </div>
             <!-- HEADER END -->
             
+            <!-- MENU START -->
+            <div class="menu menu-collapse">
+                <a class="btn btn-menu">Vrijwilligersbeheer</a>
+                <a class="btn btn-menu">Takenbeheer</a>
+                <a class="btn btn-menu">Inzet</a>
+            </div>
+            <div class="menu-listener"></div>
+            <!-- MENU END -->
+            
+            
             <!-- DESKTOP CONTENT START -->
             <div class="header-push hidden-xs">
-                
-                <div class="menu">
-                    <a class="btn btn-menu">Vrijwilligersbeheer</a>
-                    <a class="btn btn-menu">Takenbeheer</a>
-                    <a class="btn btn-menu">Inzet</a>
-                </div>
                              
                 <!-- COLUMN 1 START -->
                 <div class="col-sm-6 col-md-4">
@@ -342,6 +348,20 @@
 
             <!-- jQuery -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            
+            <!-- Menu collapse script (jQuery) -->
+            <script type="text/javascript">
+                $( ".menu-collapse" ).hover(function() {
+  $( ".menu" ).slideDown( "300", function() {
+    // Animation complete.
+  });
+});
+                $( ".menu-listener" ).hover(function() {
+  $( ".menu" ).slideUp( "300", function() {
+    // Animation complete.
+  });
+});
+            </script>
             
             <!-- Bootstrap -->
             <script src="js/bootstrap.min.js"></script>
