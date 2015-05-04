@@ -53,11 +53,6 @@ a:active {
     height: 100%;
     width: 100%
 }
-.cont-white {
-    padding-top: 75px;
-    padding-bottom: 50px;
-    background-color: white !important;
-}
 .support {
     padding-top: 75px;
 }
@@ -75,6 +70,10 @@ a:active {
     z-index: 99;
     top: 0;
     left: 0;
+}
+.header-push {
+    padding-top: 75px;
+    padding-bottom: 50px;
 }
 .header .left {
     text-align:left;
@@ -94,7 +93,8 @@ a:active {
 
 /* Blocks */
 .block {
-    
+    border-left:4px solid #F18D05;
+    padding-left:10px;
 }
 .block-border {
     margin-top:8px;
@@ -109,7 +109,9 @@ a:active {
     color:#aaa;
     text-align:right;
 }
-
+.tedoen-panel {
+    margin-top:18px;
+}
 
 /***********/
 /* BUTTONS */
