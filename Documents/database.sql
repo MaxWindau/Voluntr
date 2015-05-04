@@ -1,5 +1,5 @@
 CREATE TABLE Gebruikers (
-    id              int             NOT NULL        AUTO_INCREMENT,
+    id              int(10)             NOT NULL        AUTO_INCREMENT,
     voornaam        varchar(50)     NOT NULL,
     tussenvoegsel   varchar(15),
     achternaam      varchar(50)     NOT NULL,
@@ -12,17 +12,16 @@ CREATE TABLE Gebruikers (
     toevoegsel      varchar(20),
     postcode        varchar(10)     NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (id) REFERENCES GebruikerTelefoon(id),
+	INDEX idxId (id),
     UNIQUE (email),
     CONSTRAINT checkLand CHECK (land IN ('Nederland', 'Duitsland', 'Belgie'))
 );
 
 CREATE TABLE GebruikerTelefoon (
-    id              int             NOT NULL,
+    id              int(10)         NOT NULL,
     telefoonnummer  varchar(20)     NOT NULL,
     PRIMARY KEY (id, telefoonnummer),
-    FOREIGN KEY (id) REFERENCES Gebruikers(id),
-    CONSTRAINT maxTelNr CHECK (4 > ALL (SELECT COUNT(*) FROM GebruikerTelefoon GROUP BY id))
+    FOREIGN KEY (id) REFERENCES Gebruikers(id)
 );
 
 CREATE TABLE Evenementen (
@@ -34,7 +33,7 @@ CREATE TABLE Evenementen (
 );
 
 CREATE TABLE Inschrijving (
-    id              int             NOT NULL,
+    id              int(20)            NOT NULL,
     evenementnaam   varchar(50)     NOT NULL,
     type            varchar(20)     NOT NULL,
     PRIMARY KEY(id),
@@ -53,22 +52,19 @@ CREATE TABLE EvenementTaak (
 );
 
 CREATE TABLE GebruikerBeschikbaar (
-    id              int             NOT NULL,
+    id              int(10)         NOT NULL,
     evenementnaam   varchar(50)     NOT NULL,
     moment          date            NOT NULL,
     PRIMARY KEY (id, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam),
-    FOREIGN KEY (id, evenementnaam, moment) REFERENCES EvenementTaak(evenementnaam, taaknaam, moment),
-    FOREIGN KEY (id, evenementnaam, moment) REFERENCES GebruikerTaak(evenementnaam, taaknaam, moment)
+    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam)
 );
 
 CREATE TABLE GebruikerTaak (
-    id              int             NOT NULL,
+    id              int(10)         NOT NULL,
     evenementnaam   varchar(50)     NOT NULL,
     taaknaam        varchar(80)     NOT NULL,
     moment          date            NOT NULL,
     PRIMARY KEY (id, evenementnaam, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam),
-    FOREIGN KEY (id, evenementnaam, moment) REFERENCES EvenementTaak(evenementnaam, taaknaam, moment)
+    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam)
 );
     
