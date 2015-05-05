@@ -43,12 +43,12 @@ $page_file = 'login';
             <!-- HEADER START -->
             <div class="header">
                 <!-- Header LEFT -->
-                <div class="left col-sm-4 menu-collapse hidden-xs" style="">
+                <div class="left col-sm-4 main-menu-collapse hidden-xs" style="">
                     <h3 class="no-margin" style="font-weight:200;color:white;">
                         <div class="icon">
                             <i class="fa fa-dashboard <?php echo $page_fa_icon; ?>"></i>
                         </div>
-                        Dashboard<?php echo $page_title; ?>
+                        <?php echo $page_title; ?>
                     </h3>
                 </div>
                 
@@ -66,7 +66,7 @@ $page_file = 'login';
                         <!-- Organisation: name -->
                         <?php echo $account_name; ?> <span class="caret"></span>&nbsp;
                         <!-- Organisation: logo -->
-                        <img style="height:35px;z-index:1001;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
+                        <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
                     </h5>
                 </div>
                 
@@ -76,17 +76,11 @@ $page_file = 'login';
             
             <!-- MENU START -->
             <?php if($show_menu == true) { ?>
-            <!--<div class="menu menu-collapse hidden-xs">
-                <a class="btn btn-menu"><i class="fa fa-dashboard"></i> Dashboard</a>
-                <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
-                <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
-                <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
-            </div>-->
             <div class="menu-listener"></div>
             <?php } ?>
             <!-- MENU END -->
-            <div class="popover-menu menu-collapse"> <!-- NEW -->
-                <div class="popover bottom">
+            <div class="main-menu main-menu-collapse" id="main-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
+                <div class="popover bottom" id="main-menu">
                     <div class="arrow"></div>
                     <div class="popover-content">
                         <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard"></i> Dashboard</a>
@@ -98,10 +92,16 @@ $page_file = 'login';
             </div>
             
             <!-- ACCOUNT-MENU START -->
-            <div class="account-menu account-menu-collapse hidden-xs col-sm-4">
-                <p>Test</p>
-            </div>
-            <div class="account-menu-shadow-hider">
+            <div class="account-menu account-menu-collapse" id="account-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
+                <div class="popover bottom" id="account-menu">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
+                        <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
+                        <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
+                    </div>
+                </div>
             </div>
             <!-- ACCOUNT-MENU END -->
             
@@ -159,41 +159,47 @@ $page_file = 'login';
             <!-- jQuery -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             
-            <!-- Menu collapse script (jQuery) -->
+            <!-- Main-menu collapse script (jQuery) -->
             <script type="text/javascript">
                 $( document ).ready(function() {
-                    $( ".popover-menu" ).hide(0, function() {
-                        // Animation complete.
-                    });
+                    $("#main-menu-javascript-visible").removeAttr("style");
+                    $( "#main-menu" ).hide(0, function() {});
                 });
-                $( ".menu-collapse" ).hover(function() {          
-                    $( ".popover-menu" ).show(0, function() {
+                $( ".main-menu-collapse" ).hover(function() {          
+                    $( "#main-menu" ).show(0, function() {
                         // Animation complete.
                     });               
                 });
                 $( ".menu-listener" ).hover(function() {
-                    $( ".popover-menu" ).hide(0, function() {
+                    $( "#main-menu" ).hide(0, function() {
                         // Animation complete.
                     });
                 });
                 $( ".center" ).hover(function() {
-                    // Needs to be fine-tuned
-                    $( ".popover-menu" ).hide(0, function() {
-                        setInterval(0);
+                    $( "#main-menu" ).hide(0, function() {
                     });
                 });
             </script>
             
             <!-- Account-menu collapse script (jQuery) -->
             <script type="text/javascript">
-                $( ".account-menu-collapse" ).hover("1", function() {          
-                    $( ".account-menu" ).show(function() {
+                $( document ).ready(function() {
+                    $("#account-menu-javascript-visible").removeAttr("style");
+                    $( "#account-menu" ).hide(0, function() {}); 
+                });
+                $( ".account-menu-collapse" ).hover(function() {          
+                    $( "#account-menu" ).show(0, function() {
                         // Animation complete.
                     });               
                 });
-                $( ".menu-listener" ).click(function() {
-                    $( ".account-menu" ).hide("1", function() {
+                $( ".menu-listener" ).hover(function() {
+                    $( "#account-menu" ).hide(0, function() {
                         // Animation complete.
+                    });
+                });
+                $( ".center" ).hover(function() {
+                    $( "#account-menu" ).hide(0, function() {
+                        setInterval(0);
                     });
                 });
             </script>

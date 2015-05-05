@@ -87,6 +87,9 @@ a:active {
 .header .left {
     text-align:left;
     margin-top:3px;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
 }
 .left .icon {
     margin-top:-1px;
@@ -95,34 +98,58 @@ a:active {
 }
 .header .center {
     text-align:center;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
 }
 .header .right {
     text-align:right;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
 }
 
 /* Menu */
-.menu {
-    padding: 8px 15px 0px 15px;
-    margin:0px -15px -0px -15px;
-    background-color: #D87400;
-    display:none;
-    position:relative;
-    top:55px;
+.main-menu .popover {
+    position: fixed;
+    top:50px;
+    left:4px;
+    border:none;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.7);
+    padding:0 !important;
+    width:250px;
+    text-align:center;   
 }
-.account-menu {
-    padding: 8px 15px 0px 15px;
-    background-color: #D87400;
-    display:none;
-    position:fixed;
-    top:57px;
-    right:0px;
-
-    z-index: 100;
-    box-shadow: -1px 1px 1px rgba(50, 50, 50, 0.3);
+.main-menu .popover-content{
+    padding:0 !important;
+    overflow:hidden;
+    border-radius:5px;
 }
+.main-menu .arrow {
+    margin-left:-113px !important;
+}
+.account-menu .popover {
+    position: fixed;
+    top:50px;
+    right:10px;
+    left:auto;
+    border:none;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.7);
+    padding:0 !important;
+    width:250px;
+    text-align:center;   
+}
+.account-menu .popover-content{
+    padding:0 !important;
+    overflow:hidden;
+    border-radius:5px;
+}
+ .account-menu .arrow {
+    margin-left: 92px !important;
+ }
 .menu-listener {
     position:fixed;
-    top:103px;
+    top:65px;
     left:0;
     height:calc(100% - 103px);
     width:100%;
@@ -269,26 +296,5 @@ td {
 /* MISC */
 /********/
 
-.popover-menu .popover {
-    position: fixed;
-    top:50px;
-    left:4px;
-    display: block;
-    border:none;
-    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.7);
-    padding:0 !important;
-    width:250px;
-    text-align:center;
-    
-}
-.popover-menu .popover-content {
-    padding:0 !important;
-    overflow:hidden;
-
-    border-radius:5px;
-}
-.popover-menu .arrow {
-    margin-left:-113px !important;;
-}
 
 
