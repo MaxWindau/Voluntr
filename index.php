@@ -4,7 +4,7 @@ $page_title = 'Dashboard';
 $page_fa_icon = 'fa-dashboard';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
-$page_file = 'login';
+$page_file = 'index';
     
 
 ?>
@@ -170,7 +170,7 @@ $page_file = 'login';
                         // Animation complete.
                     });               
                 });
-                $( ".menu-listener" ).hover(function() {
+                $( ".main-menu" ).mouseleave(function() {
                     $( "#main-menu" ).hide(0, function() {
                         // Animation complete.
                     });
@@ -192,7 +192,7 @@ $page_file = 'login';
                         // Animation complete.
                     });               
                 });
-                $( ".menu-listener" ).hover(function() {
+                $( ".account-menu" ).mouseleave(function() {
                     $( "#account-menu" ).hide(0, function() {
                         // Animation complete.
                     });

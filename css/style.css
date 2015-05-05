@@ -153,7 +153,7 @@ a:active {
     left:0;
     height:calc(100% - 103px);
     width:100%;
-    z-index: 1000;
+    z-index: 000;
 }
 
 /* Blocks */
