@@ -4,7 +4,7 @@ $page_title = 'Dashboard';
 $page_fa_icon = 'fa-dashboard';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
-$page_file = 'index';
+$page_file = 'login';
     
 
 ?>
@@ -44,29 +44,29 @@ $page_file = 'index';
             <div class="header">
                 <!-- Header LEFT -->
                 <div class="left col-sm-4 menu-collapse hidden-xs" style="">
-                    <h3 style="font-weight:200">
+                    <h3 class="no-margin" style="font-weight:200;color:white;">
                         <div class="icon">
-                            <i class="fa <?php echo $page_fa_icon; ?>"></i>
+                            <i class="fa fa-dashboard <?php echo $page_fa_icon; ?>"></i>
                         </div>
-                        <?php echo $page_title; ?>
+                        Dashboard<?php echo $page_title; ?>
                     </h3>
                 </div>
                 
                 <!-- Header CENTER -->
-                <div class="center col-xs-12 col-sm-4 menu-collapse">
-                    <h2>
+                <div class="center col-xs-12 col-sm-4">
+                    <h2 class="no-margin">
                         <i class="fa fa-puzzle-piece"></i>
                         Voluntr
                     </h2>
                 </div>
                 
                 <!-- Header RIGHT -->
-                <div class="right col-sm-4 hidden-xs">
-                    <h5>
+                <div class="right col-sm-4 account-menu-collapse hidden-xs">
+                    <h5 class="no-margin">
                         <!-- Organisation: name -->
                         <?php echo $account_name; ?> <span class="caret"></span>&nbsp;
                         <!-- Organisation: logo -->
-                        <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
+                        <img style="height:35px;z-index:1001;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
                     </h5>
                 </div>
                 
@@ -76,15 +76,34 @@ $page_file = 'index';
             
             <!-- MENU START -->
             <?php if($show_menu == true) { ?>
-            <div class="menu menu-collapse hidden-xs">
+            <!--<div class="menu menu-collapse hidden-xs">
                 <a class="btn btn-menu"><i class="fa fa-dashboard"></i> Dashboard</a>
                 <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
                 <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
                 <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
-            </div>
+            </div>-->
             <div class="menu-listener"></div>
             <?php } ?>
             <!-- MENU END -->
+            <div class="popover-menu menu-collapse"> <!-- NEW -->
+                <div class="popover bottom">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
+                        <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
+                        <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACCOUNT-MENU START -->
+            <div class="account-menu account-menu-collapse hidden-xs col-sm-4">
+                <p>Test</p>
+            </div>
+            <div class="account-menu-shadow-hider">
+            </div>
+            <!-- ACCOUNT-MENU END -->
             
             
             <!-- DESKTOP CONTENT START -->
@@ -142,20 +161,39 @@ $page_file = 'index';
             
             <!-- Menu collapse script (jQuery) -->
             <script type="text/javascript">
+                $( document ).ready(function() {
+                    $( ".popover-menu" ).hide(0, function() {
+                        // Animation complete.
+                    });
+                });
                 $( ".menu-collapse" ).hover(function() {          
-                    $( ".menu" ).slideDown( "100", function() {
+                    $( ".popover-menu" ).show(0, function() {
                         // Animation complete.
                     });               
                 });
                 $( ".menu-listener" ).hover(function() {
-                    $( ".menu" ).slideUp( "100", function() {
+                    $( ".popover-menu" ).hide(0, function() {
                         // Animation complete.
                     });
                 });
-                $( ".header" ).click(function() {
+                $( ".center" ).hover(function() {
                     // Needs to be fine-tuned
-                    $( ".menu" ).slideUp( "100", function() {
-                        setInterval(1000);
+                    $( ".popover-menu" ).hide(0, function() {
+                        setInterval(0);
+                    });
+                });
+            </script>
+            
+            <!-- Account-menu collapse script (jQuery) -->
+            <script type="text/javascript">
+                $( ".account-menu-collapse" ).hover("1", function() {          
+                    $( ".account-menu" ).show(function() {
+                        // Animation complete.
+                    });               
+                });
+                $( ".menu-listener" ).click(function() {
+                    $( ".account-menu" ).hide("1", function() {
+                        // Animation complete.
                     });
                 });
             </script>
@@ -168,6 +206,9 @@ $page_file = 'index';
                 $(function () {
                     $('[data-toggle="tooltip"]').tooltip()
                 })
+                $(function () { 
+                    $('[data-toggle="popover"]').popover();    
+                });
             </script>
             
         </div> <!-- background div //-->
