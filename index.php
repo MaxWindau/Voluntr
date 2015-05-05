@@ -83,10 +83,10 @@ $page_file = 'index';
                 <div class="popover bottom" id="main-menu">
                     <div class="arrow"></div>
                     <div class="popover-content">
-                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard"></i> Dashboard</a>
-                        <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
-                        <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
-                        <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
+                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard pull-left"></i> Dashboard</a>
+                        <a class="btn btn-menu"><i class="fa fa-users pull-left"></i> Vrijwilligers</a>
+                        <a class="btn btn-menu"><i class="fa fa-list-ol pull-left"></i> Taken</a>
+                        <a class="btn btn-menu"><i class="fa fa-check pull-left"></i> Inzet</a> 
                     </div>
                 </div>
             </div>
@@ -96,10 +96,10 @@ $page_file = 'index';
                 <div class="popover bottom" id="account-menu">
                     <div class="arrow"></div>
                     <div class="popover-content">
-                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard"></i> Dashboard</a>
-                        <a class="btn btn-menu"><i class="fa fa-users"></i> Vrijwilligers</a>
-                        <a class="btn btn-menu"><i class="fa fa-list-ol"></i> Taken</a>
-                        <a class="btn btn-menu"><i class="fa fa-check"></i> Inzet</a> 
+                        <a class="btn btn-menu" style="border:none;">Dashboard <i class="fa fa-dashboard pull-right"></i></a>
+                        <a class="btn btn-menu">Vrijwilligers <i class="fa fa-users pull-right"></i></a>
+                        <a class="btn btn-menu">Taken <i class="fa fa-list-ol pull-right"></i></a>
+                        <a class="btn btn-menu">Inzet <i class="fa fa-check pull-right"></i></a> 
                     </div>
                 </div>
             </div>
