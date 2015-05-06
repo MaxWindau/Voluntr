@@ -4,7 +4,7 @@ $page_title = 'Dashboard';
 $page_fa_icon = 'fa-dashboard';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
-$page_file = 'index';
+$page_file = 'dashboard';
     
 
 ?>
