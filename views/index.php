@@ -1,5 +1,5 @@
             <!-- DESKTOP CONTENT START -->
-            <div class="header-push hidden-xs">
+            
                              
                 <!-- COLUMN 1 START -->
                 <div class="col-sm-6 col-md-4">
@@ -220,7 +220,4 @@
 
                 </div>
                 <!-- COLUMN 3 END -->
-                        
-                
-            </div>
             <!-- DESKTOP CONTENT END -->

@@ -107,7 +107,9 @@ $page_file = 'index';
 
         <!-- DESKTOP CONTENT START -->
         <div class="animsition">
+            <div class="header-push hidden-xs"></div>
             <?php require_once('views/'.$page_file.'.php'); ?>
+            <div class="col-xs-12 footer-push hidden-xs"></div>
         </div>
         <!-- DESKTOP CONTENT END -->
 
@@ -131,28 +133,24 @@ $page_file = 'index';
         <!-- MOBILE CONTENT END -->
 
         <!-- FOOTER START -->
-        <div class="col-sm-12 hidden-xs" style="background-color:#fafafa;height:90px;padding:15px;">
+        <div class="footer col-sm-12 hidden-xs">
             <div class="row">
-
                 <!-- Footer LEFT -->
-                <div class="col-sm-4 col-sm-offset-1">
-                    <h2 style="color:#f18D05;">Voluntr</h2>
-                    <h4>Een slogan zegt alles.</h4>
+                <div class="col-sm-4">
+                    <h3 class="no-margin">Voluntr <sup><span style="font-size:11px !important;font-family:Arial, sans-serif;" class="label label-basis">alpha</span></sup></h3>
+                    
                 </div>
 
                 <!-- Footer CENTER -->
-                <div class="col-sm-3">
-                    <h5>Over ons</h5>
-                    <h5>Privacy</h5>
-                    <h5>Algemene voorwaarden</h5>
+                <div class="col-sm-4">
+                    <h5 class="no-margin" style="padding-top:4px;color:#bbb !important;text-align:center;">Made with <i style="color:#F18D05;" class="fa fa-heart"></i> in Nijmegen</h5>
                 </div>
 
                 <!-- Footer RIGHT -->
-                <div class="col-sm-3">
-                    <br />
-                    <h3 style="color:#eee !important;text-align:right;">Made with <i class="fa fa-heart"></i> in Nijmegen</h3>
+                <div class="col-sm-4">
+                    <h6 class="no-margin" style="padding-top:8px;padding-right:10px;color:#ccc;text-align:right;font-weight:200;">Over ons - Algemene voorwaarden - Privacy</h6>
+                    
                 </div>
-
             </div>
         </div>
         <!-- FOOTER END -->
@@ -215,8 +213,8 @@ $page_file = 'index';
 
             inClass               :   'zoom-in-sm',
             outClass              :   'zoom-out-sm',
-            inDuration            :    300,
-            outDuration           :    300,
+            inDuration            :    200,
+            outDuration           :    200,
             linkElement           :   '.animsition-link',
             // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
             loading               :    true,
