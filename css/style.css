@@ -26,16 +26,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* Link colors */
-a:link {
+a.orange:link {
     color: #F18D05;
 }
-a:visited {
+a.orange:visited {
     color: #F18D05;
 }
-a:hover {
+a.orange:hover {
     color: #D87400;
 }
-a:active {
+a.orange:active {
     color: #D87400;
 }
 
@@ -173,8 +173,9 @@ a:active {
 .block-content {
     margin:10px;
 }
-.tedoen-panel {
-    margin-top:18px;
+.tedoen-panel h4 {
+    padding:0 !important;
+    margin:0 !important;
 }
 
 /* Footer */

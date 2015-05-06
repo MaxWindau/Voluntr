@@ -59,6 +59,38 @@
 <!-- COLUMN 2 START -->
 <div class="col-sm-6 col-md-4">
 
+    <!-- Evenementgegevens BLOCK START -->
+    <div class="block">
+        <!-- Block: header -->
+        <div class="block-header row">
+            <div class="col-sm-8">
+                <h3 class="left">Evenementgegevens</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="right"></h3>
+            </div>
+        </div>
+
+
+        <!-- Evenementgegevens: content -->
+        <div class="block-content">
+            <address>
+                <b>Datum:</b> 2 en 3 september 2015<br />
+                <b>Locatie:</b> Meulenveld, Molenhoek
+            </address>
+            <!-- Google Maps -->
+            <iframe style="width:100%;height:180px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Meulenveld%2C%20Molenhoek%2C%20Niederlande&key=AIzaSyAZFesjPfJwQoHSIQZOENu1e-jRUBO9aS0"></iframe>
+        </div>
+    </div>
+    <!-- Evenementgegevens BLOCK END -->
+
+</div>
+<!-- COLUMN 2 END -->
+
+
+<!-- COLUMN 3 START -->
+<div class="col-sm-12 col-md-4">
+
     <!-- Te doen BLOCK START -->
     <div class="block">
         <!-- Block: header -->
@@ -126,101 +158,6 @@
         </div>
     </div>
     <!-- Te doen BLOCK END -->
-
-    <!-- Evenementgegevens BLOCK START -->
-    <div class="block">
-        <!-- Block: header -->
-        <div class="block-header row">
-            <div class="col-sm-8">
-                <h3 class="left">Evenementgegevens</h3>
-            </div>
-            <div class="col-sm-4">
-                <h3 class="right"></h3>
-            </div>
-        </div>
-
-
-        <!-- Evenementgegevens: content -->
-        <div class="block-content">
-            <address>
-                <b>Datum:</b> 2 en 3 september 2015<br />
-                <b>Locatie:</b> Meulenveld, Molenhoek
-            </address>
-            <!-- Google Maps -->
-            <iframe style="width:100%;height:180px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Meulenveld%2C%20Molenhoek%2C%20Niederlande&key=AIzaSyAZFesjPfJwQoHSIQZOENu1e-jRUBO9aS0"></iframe>
-        </div>
-    </div>
-    <!-- Evenementgegevens BLOCK END -->
-
-</div>
-<!-- COLUMN 2 END -->
-
-
-<!-- COLUMN 3 START -->
-<div class="col-sm-12 col-md-4">
-
-    <!-- Acties BLOCK START -->
-    <div class="block">
-        <!-- Block: header -->
-        <div class="block-header row">
-            <div class="col-sm-8">
-                <h3 class="left">Acties</h3>
-            </div>
-            <div class="col-sm-4">
-                <h3 class="right"></h3>
-            </div>
-        </div>
-
-        <!-- Acties: content -->
-        <div class="block-content">
-            <div class="row">
-
-                <!-- Vrijwilligersbeheer -->
-                <div class="col-sm-6 col-md-12">
-                    <a class="btn btn-menu" style="width:100%;">
-                        <div style="width:100%;">
-                            <div style="overflow:hidden;float:left;width:80%;text-align:left;margin-top:8px !important;">
-                                <h4><i class="fa fa-users"></i> Vrijwilligersbeheer</h4>
-                            </div>
-                            <div style="overflow:hidden;float:right;width:20%;text-align:right;margin-top:-3px;">
-                                <h1><i class="fa fa-arrow-right"></i></h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Takenbeheer -->
-                <div class="col-sm-6 col-md-12">
-                    <a class="btn btn-basis" style="width:100%;">
-                        <div style="width:100%;">
-                            <div style="overflow:hidden;float:left;width:80%;text-align:left;margin-top:8px !important;">
-                                <h4><i class="fa fa-list-ol"></i> Takenbeheer</h4>
-                            </div>
-                            <div style="overflow:hidden;float:right;width:20%;text-align:right;margin-top:-3px;">
-                                <h1><i class="fa fa-arrow-right"></i></h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Inzet -->
-                <div class="col-sm-6 col-md-12">
-                    <a class="btn btn-basis" style="width:100%;">
-                        <div style="width:100%;">
-                            <div style="overflow:hidden;float:left;width:80%;text-align:left;margin-top:8px !important;">
-                                <h4><i class="fa fa-check"></i> Inzet</h4>
-                            </div>
-                            <div style="overflow:hidden;float:right;width:20%;text-align:right;margin-top:-3px;">
-                                <h1><i class="fa fa-arrow-right"></i></h1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Acties BLOCK END -->
 
 </div>
 <!-- COLUMN 3 END -->
