@@ -107,7 +107,9 @@ $page_file = 'index';
             
             
             <!-- DESKTOP CONTENT START -->
-            <?php require_once('views/'.$page_file.'.php'); ?>
+            <div class="animsition">
+                <?php require_once('views/'.$page_file.'.php'); ?>
+            </div>
             <!-- DESKTOP CONTENT END -->
             
             <!-- MOBILE CONTENT START -->
@@ -202,6 +204,38 @@ $page_file = 'index';
                         setInterval(0);
                     });
                 });
+            </script>
+            
+            <!-- Animation script -->
+            <link rel="stylesheet" href="css/animsition.min.css">
+            <script src="js/jquery.animsition.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+
+              $(".animsition").animsition({
+
+                inClass               :   'zoom-in-sm',
+                outClass              :   'zoom-out-sm',
+                inDuration            :    300,
+                outDuration           :    300,
+                linkElement           :   '.animsition-link',
+                // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+                loading               :    true,
+                loadingParentElement  :   'body', //animsition wrapper element
+                loadingClass          :   'animsition-loading',
+                unSupportCss          : [ 'animation-duration',
+                                          '-webkit-animation-duration',
+                                          '-o-animation-duration'
+                                        ],
+                //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+                //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+
+                overlay               :   false,
+
+                overlayClass          :   'animsition-overlay-slide',
+                overlayParentElement  :   'body'
+                });
+            });
             </script>
             
             <!-- Bootstrap -->
