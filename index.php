@@ -143,7 +143,7 @@ $page_file = 'index';
 
                 <!-- Footer CENTER -->
                 <div class="col-sm-4">
-                    <h5 class="no-margin" style="padding-top:4px;color:#bbb !important;text-align:center;">Made with <i style="color:#F18D05;" class="fa fa-heart"></i> in Nijmegen</h5>
+                    <!-- <h5 class="no-margin" style="padding-top:4px;color:#bbb !important;text-align:center;">Made with <i style="color:#F18D05;" class="fa fa-heart"></i> in Nijmegen</h5> -->
                 </div>
 
                 <!-- Footer RIGHT -->
