@@ -150,21 +150,28 @@ a:active {
 
 /* Blocks */
 .block {
-    border-left:4px solid #F18D05;
-    padding-left:10px;
+    background-color: #fafafa;
+    border:1px solid #eee;
+    overflow:hidden;
+    margin-bottom:20px;
 }
-.block-border {
-    margin-top:8px;
-    margin-bottom:10px;
+.block-header h3 {
+    margin:10px !important;
+}
+.block-header {
     border-bottom: 1px solid #eee;
 }
+
 .block-header .left {
-    color:inherit;
     text-align:left;
 }
 .block-header .right  {
-    color:#aaa;
     text-align:right;
+    font-size:19px;
+    color:#f18d05;
+}
+.block-content {
+    margin:10px;
 }
 .tedoen-panel {
     margin-top:18px;
@@ -182,7 +189,7 @@ a:active {
     background-color:#f9f9f9;
 }
 .footer-push {
-    height:50px;
+    height:35px;
     width:100%;
 }
 

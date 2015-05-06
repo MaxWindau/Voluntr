@@ -106,7 +106,7 @@ $page_file = 'index';
 
 
         <!-- DESKTOP CONTENT START -->
-        <div class="animsition">
+        <div class="animsition hidden-xs">
             <div class="header-push hidden-xs"></div>
             <?php require_once('views/'.$page_file.'.php'); ?>
             <div class="col-xs-12 footer-push hidden-xs"></div>
