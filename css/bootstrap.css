@@ -6717,14 +6717,10 @@ h6 {
   margin: 0 auto -35px;
   /* the bottom margin is the negative value of the footer's height */
 }
+.footer,
 .push-footer {
-  height: 50px;
-  /* .push must be the same height as .footer */
-}
-.footer {
   height: 35px;
-  padding-top: 0px;
-  padding-bottom: 10px;
+  /* .push must be the same height as .footer */
 }
 /***********/
 /* BUTTONS */

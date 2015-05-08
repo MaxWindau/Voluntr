@@ -135,26 +135,8 @@ $page_file = 'dashboard';
             <div class="push-footer col-xs-12"></div>
         </div>
         <!-- FOOTER START -->
-        <div class="footer col-sm-12 hidden-xs">
-            <div class="row">
-                <!-- Footer LEFT -->
-                <div class="col-sm-4">
-<!--                    <h3 class="no-margin">Voluntr <sup><span style="font-size:11px !important;font-family:Arial, sans-serif;" class="label label-basis">alpha</span></sup></h3>-->
-                    
-                </div>
-
-                <!-- Footer CENTER -->
-                <div class="col-sm-4">
-                    <!-- <h5 class="no-margin" style="padding-top:4px;color:#bbb !important;text-align:center;">Made with <i style="color:#F18D05;" class="fa fa-heart"></i> in Nijmegen</h5> -->
+        <div class="footer">       
                     <h6 class="no-margin" style="text-align:center;font-weight:200;font-size:13px;">Over ons - Algemene voorwaarden - Privacy</h6>
-                </div>
-
-                <!-- Footer RIGHT -->
-                <div class="col-sm-4">
-                    
-                    
-                </div>
-            </div>
         </div>
         <!-- FOOTER END -->
 
