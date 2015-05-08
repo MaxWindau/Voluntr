@@ -4,7 +4,7 @@ $page_title = 'Inloggen';
 $page_fa_icon = 'fa-key';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
-$page_file = 'dashboard';
+$page_file = 'planning';
     
 
 ?>
