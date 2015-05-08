@@ -44,6 +44,6 @@
         </div>
 
 
-        <button type="submit" class="btn btn-lg btn-basis pull-right">Volgende stap <i class="fa fa-arrow-right"></i></button>
+        <button type="submit" class="btn btn-lg btn-primary pull-right">Volgende stap <i class="fa fa-arrow-right"></i></button>
     </form>
 </div>

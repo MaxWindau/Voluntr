@@ -9,7 +9,7 @@
                 <h3 class="left">Voortgang</h3>
             </div>
             <div class="col-sm-4">
-                <h3 class="right"><span class="badge">48%</span></h3>
+                <span class="pull-right label label-primary">48%</span>
             </div>
         </div>
 
@@ -99,7 +99,7 @@
                 <h3 class="left">Te doen</h3>
             </div>
             <div class="col-sm-4">
-                <h3 class="right"><span class="badge">2</span></h3>
+                <span class="pull-right label label-primary">2</span>
             </div>
         </div>
 

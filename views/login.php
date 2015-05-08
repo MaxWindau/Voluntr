@@ -1,6 +1,5 @@
 <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-    <h2>Inloggen bij Voluntr</h2><br />
-    <h4>Sociale media</h4>
+    <h2>Inloggen bij Voluntr</h2>
     <div class="form-group">
         <a class="btn btn-sm btn-social btn-facebook"><i class="fa fa-facebook"></i>Inloggen met Facebook</a>
         <a class="btn btn-sm btn-social btn-twitter"><i class="fa fa-twitter"></i>Inloggen met Twitter</a> 
@@ -15,6 +14,6 @@
             <input type="password" class="form-control input-lg" id="wachtwoord" placeholder="Wachtwoord">
         </div>
 
-        <button type="submit" class="btn btn-lg btn-basis pull-right">Aan de slag! <i class="fa fa-arrow-right"></i></button>
+        <button type="submit" class="btn btn-lg btn-primary pull-right">Aan de slag! <i class="fa fa-arrow-right"></i></button>
     </form>
 </div>

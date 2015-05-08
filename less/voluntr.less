@@ -1,0 +1,191 @@
+/*
+//  Author: Max Windau / Tim van Dijk
+//  E-mail: Max.Windau@gmail.com
+*/
+
+/***************/
+/* HTML & BODY */
+/***************/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+/***********************/
+/* FONTS, TEXT & COLOR */
+/***********************/
+
+/* Headers margin */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: medium;
+}
+
+/********/
+/* DIVS */
+/********/
+
+/* Containers */
+.support {
+    padding-top: 75px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    min-height: 55px;
+    background-color: @brand-primary; /* Old browsers */
+    border-bottom: 3px solid @brand-primary;
+    color: white;
+    padding: 11px 0px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+.no-margin {
+    margin:0 !important;
+}
+.header-push {
+    padding-top:85px;
+}
+.header .left {
+    text-align:left;
+    margin-top:0px;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
+}
+.left .icon {
+    margin-top:-1px;
+    float:left;
+    margin-right:8px;
+}
+.header .center {
+    text-align:center;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
+}
+.header .right {
+    text-align:right;
+    /* menu hover fix */
+    margin-bottom:-20px;
+    pading-bottom:20px;
+}
+
+/* Menu */
+.main-menu .popover {
+    position: fixed;
+    top:50px;
+    left:4px;
+    border:none;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.7);
+    padding:0 !important;
+    width:250px;
+    text-align:center;   
+}
+.main-menu .popover-content{
+    padding:0 !important;
+    overflow:hidden;
+    border-radius:5px;
+}
+.main-menu .arrow {
+    margin-left:-113px !important;
+}
+.account-menu .popover {
+    position: fixed;
+    top:50px;
+    right:10px;
+    left:auto;
+    border:none;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.7);
+    padding:0 !important;
+    width:250px;
+    text-align:center;   
+}
+.account-menu .popover-content{
+    padding:0 !important;
+    overflow:hidden;
+    border-radius:5px;
+}
+ .account-menu .arrow {
+    margin-left: 92px !important;
+ }
+.menu-listener {
+    position:fixed;
+    top:65px;
+    left:0;
+    height:calc(100% - 103px);
+    width:100%;
+    z-index: 000;
+}
+
+/* Blocks */
+.block {
+    overflow:hidden;
+    margin-bottom:20px;
+    background-color: #333;
+}
+
+.block-header h3 {
+    margin:10px !important;
+    font-size:15px !important;
+    color:white;
+}
+.block-header .label {
+    font-size:14px;
+    margin:7px;
+    font-weight:200;
+}
+
+.block-header .left {
+    text-align:left;
+}
+.block-header .right  {
+    text-align:right;
+    font-size:10px !important;
+    color:#f18d05;
+    
+}
+.block-content {
+    padding:10px;
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-top:none;
+}
+.tedoen-panel h4 {
+    padding:0 !important;
+    margin:0 !important;
+}
+
+/* Footer */
+.wrapper-footer {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -35px; /* the bottom margin is the negative value of the footer's height */
+}
+.push-footer {
+	height: 50px; /* .push must be the same height as .footer */
+}
+.footer {
+    height:35px;
+    padding-top:0px;
+    padding-bottom:10px;
+}
+
+
+/***********/
+/* BUTTONS */
+/***********/
+
+/**********/
+/* TABLES */
+/**********/
+
+td {
+    border-top: none !important;
+    width: 100%;
+}

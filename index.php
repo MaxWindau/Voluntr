@@ -1,7 +1,7 @@
 <?php
 
-$page_title = 'Dashboard';
-$page_fa_icon = 'fa-dashboard';
+$page_title = 'Inloggen';
+$page_fa_icon = 'fa-key';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
 $page_file = 'dashboard';
@@ -21,7 +21,7 @@ $page_file = 'dashboard';
         <title>Voluntr</title>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-social.css" rel="stylesheet">
         
         <!-- Voluntr CSS -->
@@ -29,6 +29,9 @@ $page_file = 'dashboard';
         
         <!-- Font Awesome 4.3.0 -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        
+        <!-- Google Font: Roboto -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:900,400italic,300,500,400' rel='stylesheet' type='text/css'>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,116 +42,116 @@ $page_file = 'dashboard';
     </head>
 
     <body>
-        <!-- HEADER START -->
-        <div class="header">
-            <!-- Header LEFT -->
-            <div class="left col-sm-4 main-menu-collapse hidden-xs" style="">
-                <h3 class="no-margin" style="font-weight:200;color:white;">
-                    <div class="icon">
-                        <i class="fa fa-dashboard <?php echo $page_fa_icon; ?>"></i>
+        <div class="wrapper-footer">
+            <!-- HEADER START -->
+            <div class="header">
+                <!-- Header LEFT -->
+                <div class="left col-xs-12 col-sm-4 main-menu-collapse" style="">
+
+                    <h2 class="no-margin">
+                        <i class="fa fa-puzzle-piece"></i>Voluntr
+                    </h2>
+                </div>
+
+                <!-- Header CENTER -->
+                <div class="center hidden-xs col-sm-4">
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- Header RIGHT -->
+                <div class="right col-sm-4 account-menu-collapse hidden-xs">
+
+                    <h5 class="no-margin">
+                        <!-- Organisation: name -->
+                        <?php echo $account_name; ?> <span class="caret"></span>&nbsp;
+                        <!-- Organisation: logo -->
+                        <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" /> 
+                        <a class="btn btn-default">Instellingen</a>
+                    </h5>
+                </div>
+
+
+            </div>
+            <!-- HEADER END -->
+
+            <!-- MENU START -->
+            <?php if($show_menu == true) { ?>
+            <div class="menu-listener"></div>
+            <?php } ?>
+            <!-- MENU END -->
+            <div class="main-menu main-menu-collapse" id="main-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
+                <div class="popover bottom" id="main-menu">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard pull-left"></i> Dashboard</a>
+                        <a class="btn btn-menu"><i class="fa fa-users pull-left"></i> Vrijwilligers</a>
+                        <a class="btn btn-menu"><i class="fa fa-list-ol pull-left"></i> Taken</a>
+                        <a class="btn btn-menu"><i class="fa fa-check pull-left"></i> Inzet</a> 
                     </div>
-                    <?php echo $page_title; ?>
-                </h3>
-            </div>
-
-            <!-- Header CENTER -->
-            <div class="center col-xs-12 col-sm-4">
-                <h2 class="no-margin">
-                    <i class="fa fa-puzzle-piece"></i>
-                    Voluntr
-                </h2>
-            </div>
-
-            <!-- Header RIGHT -->
-            <div class="right col-sm-4 account-menu-collapse hidden-xs">
-                <h5 class="no-margin">
-                    <!-- Organisation: name -->
-                    <?php echo $account_name; ?> <span class="caret"></span>&nbsp;
-                    <!-- Organisation: logo -->
-                    <img style="height:35px;" src="img/molenhoekdag-vierkant.png" class="img-circle" />
-                </h5>
-            </div>
-
-
-        </div>
-        <!-- HEADER END -->
-
-        <!-- MENU START -->
-        <?php if($show_menu == true) { ?>
-        <div class="menu-listener"></div>
-        <?php } ?>
-        <!-- MENU END -->
-        <div class="main-menu main-menu-collapse" id="main-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
-            <div class="popover bottom" id="main-menu">
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <a class="btn btn-menu" style="border:none;"><i class="fa fa-dashboard pull-left"></i> Dashboard</a>
-                    <a class="btn btn-menu"><i class="fa fa-users pull-left"></i> Vrijwilligers</a>
-                    <a class="btn btn-menu"><i class="fa fa-list-ol pull-left"></i> Taken</a>
-                    <a class="btn btn-menu"><i class="fa fa-check pull-left"></i> Inzet</a> 
                 </div>
             </div>
-        </div>
 
-        <!-- ACCOUNT-MENU START -->
-        <div class="account-menu account-menu-collapse" id="account-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
-            <div class="popover bottom" id="account-menu">
-                <div class="arrow"></div>
-                <div class="popover-content">
-                    <a class="btn btn-menu" style="border:none;">Dashboard <i class="fa fa-dashboard pull-right"></i></a>
-                    <a class="btn btn-menu">Vrijwilligers <i class="fa fa-users pull-right"></i></a>
-                    <a class="btn btn-menu">Taken <i class="fa fa-list-ol pull-right"></i></a>
-                    <a class="btn btn-menu">Inzet <i class="fa fa-check pull-right"></i></a> 
+            <!-- ACCOUNT-MENU START -->
+            <div class="account-menu account-menu-collapse" id="account-menu-javascript-visible" style="height:0px;"> <!-- NEW -->
+                <div class="popover bottom" id="account-menu">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <a class="btn btn-menu" style="border:none;">Dashboard <i class="fa fa-dashboard pull-right"></i></a>
+                        <a class="btn btn-menu">Vrijwilligers <i class="fa fa-users pull-right"></i></a>
+                        <a class="btn btn-menu">Taken <i class="fa fa-list-ol pull-right"></i></a>
+                        <a class="btn btn-menu">Inzet <i class="fa fa-check pull-right"></i></a> 
+                    </div>
                 </div>
             </div>
+            <!-- ACCOUNT-MENU END -->
+
+
+            <!-- DESKTOP CONTENT START -->
+            <div class="animsition hidden-xs">
+                <div class="header-push hidden-xs"></div>
+                <?php require_once('views/'.$page_file.'.php'); ?>
+                <div class="col-xs-12 footer-push hidden-xs"></div>
+            </div>
+            <!-- DESKTOP CONTENT END -->
+
+            <!-- MOBILE CONTENT START -->
+            <div class="support visible-xs col-xs-12">
+                <center>
+                    <h2>
+                        <br />
+                        <i class="fa fa-life-ring" style="font-size:80px;"></i>
+                        <br /><br />Je scherm is te klein voor Voluntr.
+                    </h2>
+                    <h4>
+                        <br />
+                        <p>We werken aan ondersteuning voor kleine schermen.<br />
+                            Volg ons op <a href="http://www.twitter.com">@voluntr</a> voor actuele updates.</p>
+                    </h4>
+                    <h3 style="color:#aaa;"><br />Het spijt ons.</h3>
+                </center>
+
+            </div>
+            <!-- MOBILE CONTENT END -->
+            <div class="push-footer col-xs-12"></div>
         </div>
-        <!-- ACCOUNT-MENU END -->
-
-
-        <!-- DESKTOP CONTENT START -->
-        <div class="animsition hidden-xs">
-            <div class="header-push hidden-xs"></div>
-            <?php require_once('views/'.$page_file.'.php'); ?>
-            <div class="col-xs-12 footer-push hidden-xs"></div>
-        </div>
-        <!-- DESKTOP CONTENT END -->
-
-        <!-- MOBILE CONTENT START -->
-        <div class="support visible-xs col-xs-12">
-            <center>
-                <h2>
-                    <br />
-                    <i class="fa fa-life-ring" style="font-size:80px;"></i>
-                    <br /><br />Je scherm is te klein voor Voluntr.
-                </h2>
-                <h4>
-                    <br />
-                    <p>We werken aan ondersteuning voor kleine schermen.<br />
-                        Volg ons op <a href="http://www.twitter.com">@voluntr</a> voor actuele updates.</p>
-                </h4>
-                <h3 style="color:#aaa;"><br />Het spijt ons.</h3>
-            </center>
-
-        </div>
-        <!-- MOBILE CONTENT END -->
-
         <!-- FOOTER START -->
         <div class="footer col-sm-12 hidden-xs">
             <div class="row">
                 <!-- Footer LEFT -->
                 <div class="col-sm-4">
-                    <h3 class="no-margin">Voluntr <sup><span style="font-size:11px !important;font-family:Arial, sans-serif;" class="label label-basis">alpha</span></sup></h3>
+<!--                    <h3 class="no-margin">Voluntr <sup><span style="font-size:11px !important;font-family:Arial, sans-serif;" class="label label-basis">alpha</span></sup></h3>-->
                     
                 </div>
 
                 <!-- Footer CENTER -->
                 <div class="col-sm-4">
                     <!-- <h5 class="no-margin" style="padding-top:4px;color:#bbb !important;text-align:center;">Made with <i style="color:#F18D05;" class="fa fa-heart"></i> in Nijmegen</h5> -->
+                    <h6 class="no-margin" style="text-align:center;font-weight:200;font-size:13px;">Over ons - Algemene voorwaarden - Privacy</h6>
                 </div>
 
                 <!-- Footer RIGHT -->
                 <div class="col-sm-4">
-                    <h6 class="no-margin" style="padding-top:8px;padding-right:10px;color:#ccc;text-align:right;font-weight:200;">Over ons - Algemene voorwaarden - Privacy</h6>
+                    
                     
                 </div>
             </div>
