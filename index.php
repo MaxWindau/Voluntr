@@ -4,7 +4,7 @@ $page_title = 'Inloggen';
 $page_fa_icon = 'fa-key';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
-$page_file = 'planning';
+$page_file = 'dashboard';
     
 
 ?>
@@ -43,6 +43,22 @@ $page_file = 'planning';
 
     <body>
         <div class="wrapper-footer">
+            
+            <!-- NOTIFICATION BAR START -->
+            <div class="notification-bar">           
+                    <div class="col-sm-3 left">
+                        <small><i class="fa fa-exclamation-triangle"></i> Melding</small>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/silhouette-vierkant.png" style="height:14px;width:14px;align:center;border:1px white solid;" /> Tim van Dijk heeft zich aangemeld als vrijwilliger.
+                    </div>
+                    <div class="col-sm-3 right">
+                        <small>2 minuten geleden</small> <i class="fa fa-clock-o"></i>
+                    </div>
+            </div>
+            <!-- NOTIFICATION BAR END -->
+            
+            
             <!-- HEADER START -->
             <div class="header">
                 <!-- Header LEFT -->
@@ -109,6 +125,14 @@ $page_file = 'planning';
             <!-- DESKTOP CONTENT START -->
             <div class="animsition hidden-xs">
                 <div class="header-push hidden-xs"></div>
+                    <div class="col-sm-12"><div class="alert alert-danger alert-dismissible" role="alert">
+                        <i class="fa fa-warning"></i> Er is een fout opgetreden bij het maken van de planning. <a class="alert-link" href="#">Klik hier voor meer informatie.</a>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Sluiten">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>    
+                
                 <?php require_once('views/'.$page_file.'.php'); ?>
                 <div class="col-xs-12 footer-push hidden-xs"></div>
             </div>
@@ -187,7 +211,23 @@ $page_file = 'planning';
                 });
             });
         </script>
-
+        
+        <!-- Notification collapse (jQuery) -->
+        <script type="text/javascript">
+        $(document).ready(function() {
+                setTimeout(function() {
+                    $( ".notification-bar" ).slideUp(200, function() {
+                    // Animation complete.
+                    });
+                }, 8000);
+                setTimeout(function() {
+                    $( ".notification-bar" ).slideDown(200, function() {
+                    // Animation complete.
+                    });
+                }, 4000);
+        });
+        </script>
+        
         <!-- Animation script -->
         <link rel="stylesheet" href="css/animsition.min.css">
         <script src="js/jquery.animsition.min.js"></script>
