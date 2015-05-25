@@ -6742,6 +6742,9 @@ h6 {
   height: 35px;
   /* .push must be the same height as .footer */
 }
+.belvenster {
+  text-align: center;
+}
 /***********/
 /* BUTTONS */
 /***********/
