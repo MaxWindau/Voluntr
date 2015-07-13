@@ -62,35 +62,25 @@ $page_file = 'bellen';
             <!-- HEADER START -->
             <div class="header">
                 <!-- Header LEFT -->
-                <div class="left col-xs-12 col-sm-4 main-menu-collapse" style="">
+                <div class="col-xs-12 col-sm-8">
 
                     <h2 class="no-margin">
-                        <i class="fa fa-puzzle-piece header-title"></i>
-                        <a class="btn btn-sm btn-header"><img style="height:20px;margin-top:-2px;" src="img/molenhoekdag-vierkant.png" class="img-circle" /> Molenhoekdag <i class="fa fa-caret-down"></i></a>
-                        <div class="header-divider"></div>
-                        <a class="btn btn-sm btn-header active">Planning</a>
+                        <i class="fa fa-puzzle-piece"></i>
+                        <a class="btn btn-sm btn-header active"><img style="height:20px;margin-top:-2px;" src="img/molenhoekdag-vierkant.png" class="img-circle" /> Molenhoekdag <i class="fa fa-caret-down"></i></a>
+                        <span class="divider"></span>
+                        <a class="btn btn-sm btn-header"><i class="fa fa-table"></i> Rooster</a>
+                        <a class="btn btn-sm btn-header"><i class="fa fa-users"></i> Personen</a>
+                        <a class="btn btn-sm btn-header"><i class="fa fa-list-ol"></i> Taken</a>
+                        <a class="btn btn-sm btn-header"><i class="fa fa-check"></i> Enquêtes</a>
                     </h2>
                     
                 </div>
-
-                <!-- Header CENTER -->
-                <div class="center hidden-xs col-sm-4">
-                    <p>&nbsp;</p>
+                <div class="col-xs-12 col-sm-4 right">
+                    <h2 class="no-margin">
+                        <a class="btn btn-sm btn-header active"><img style="height:20px;margin-top:-2px;" src="img/silhouette-vierkant.png" class="img-circle" /> Max Windau <i class="fa fa-caret-down"></i></a>
+                        
+                    </h2>
                 </div>
-
-                <!-- Header RIGHT -->
-                <div class="right col-sm-4 account-menu-collapse hidden-xs">
-
-                    <h5 class="no-margin">
-                        <!-- Organisation: name -->
-                        <?php echo $account_name; ?> <span class="caret"></span>&nbsp;
-                        <!-- Organisation: logo -->
-                         
-                        <a class="btn btn-default">Instellingen</a>
-                    </h5>
-                </div>
-
-
             </div>
             <!-- HEADER END -->
 
@@ -129,19 +119,22 @@ $page_file = 'bellen';
             <!-- DESKTOP CONTENT START -->
             <div class="animsition hidden-xs">
                 <div class="header-push hidden-xs"></div>
+<!--
                     <div class="col-sm-12">
                         
-                        <!--<div class="alert alert-danger alert-dismissible" role="alert">
+                        <div class="alert alert-danger alert-dismissible" role="alert">
                         <i class="fa fa-warning"></i> Er is een fout opgetreden bij het maken van de planning. <a class="alert-link" href="#">Klik hier voor meer informatie.</a>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Sluiten">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div> -->
+                    </div> 
                 </div>    
+-->
                 
                 <?php require_once('views/'.$page_file.'.php'); ?>
                 
                 <!-- TEST ENVIRONMENT -->
+<!--            BELHULP
                 <div class="col-sm-12" style="text-align:center;">
                     <h3 style="text-align:left;">Belhulp</h3>
                     <p></p>
@@ -168,8 +161,21 @@ $page_file = 'bellen';
                     
                     <a class="btn btn-lg btn-danger" style="width:100%;"><i class="fa fa-remove"></i> Neemt niet op</a>
                 </div>
-                
-                
+-->
+                <div class="col-sm-12">
+                    <h3>Rooster</h3>
+                </div>
+                <div class="col-sm-3 col-md-2">
+                    <label for="personenzoeken">Zoek naar personen:</label>
+                    <input type="text" id="personenzoeken" placeholder="bijv. Jan Jansen" class="input input-sm form-control" />
+                    <div style="height:10px;margin-top:15px;border-top:1px solid #888;"></div>
+                    <p>Jan Jansen<br />
+                    Tim van Dijk</p>
+                </div>
+
+                <div class="col-sm-9 col-md-10" style="overflow-y:auto;overflow-x:auto;">
+                    
+                </div>
                 <!-- END TEST ENVIRONMENT -->
                 
                 
