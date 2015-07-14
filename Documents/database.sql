@@ -28,8 +28,8 @@ CREATE TABLE Evenementen (
     evenementnaam   varchar(50)     NOT NULL,
 	evenementid 	int (10)		NOT NULL	AUTO_INCREMENT,
     locatie         varchar(80)     NOT NULL,
-    begindatum      date            NOT NULL,
-    einddatum       date            NOT NULL,
+    begindatum      datetime            NOT NULL,
+    einddatum       datetime           NOT NULL,
     PRIMARY KEY(evenementid)
 );
 
@@ -46,7 +46,7 @@ CREATE TABLE Inschrijving (
 CREATE TABLE EvenementTaak (
     evenementid   	int(10)     NOT NULL,
     taaknaam        varchar(80)     NOT NULL,
-    moment          date            NOT NULL,
+    moment          datetime            NOT NULL,
     aantal          smallint        NOT NULL,
     PRIMARY KEY (evenementid, taaknaam, moment),
     FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION
@@ -64,7 +64,7 @@ CREATE TABLE GebruikerTaak (
     id              int(10)         NOT NULL,
     evenementid   int(10)     NOT NULL,
     taaknaam        varchar(80)     NOT NULL,
-    moment          date            NOT NULL,
+    moment          datetime            NOT NULL,
     PRIMARY KEY (id, evenementid, moment),
     FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
