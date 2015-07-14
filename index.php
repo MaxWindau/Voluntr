@@ -5,7 +5,8 @@ $page_fa_icon = 'fa-key';
 $account_name = 'Molenhoekdag';
 $show_menu = true;
 $page_file = 'bellen';
-    
+    ini_set('display_errors', 'On'); 
+error_reporting(E_ALL); 
 
 ?>
 
@@ -162,6 +163,70 @@ $page_file = 'bellen';
                     <a class="btn btn-lg btn-danger" style="width:100%;"><i class="fa fa-remove"></i> Neemt niet op</a>
                 </div>
 -->
+                
+<?php
+
+$mysqli = new mysqli("localhost", "root", "root", "voluntr");
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
+$gebruikersmomenten = mysqli_query($mysqli, 'SELECT gebruikers.voornaam, gebruikers.tussenvoegsel, gebruikers.achternaam, gebruikertaak.taaknaam, gebruikertaak.moment FROM gebruikers, gebruikertaak WHERE gebruikers.id = gebruikertaak.id GROUP BY taaknaam ORDER BY moment ASC');
+
+
+//
+//$gebruikersmomenten = mysqli_fetch_array($gebruikersmomenten);
+echo '<pre>';
+print_r($gebruikersmomenten);
+echo '</pre>';
+
+// Vraag alle timestamps op en zet ze op volgorde
+sort($timestamps);
+
+// Bereken voor elke timestamp de datum en tijd
+$k = 1;
+foreach($timestamps as $timestamp){
+    $data[$k] = date($timestamp, 'j-n-Y'); // 5-9-15 (5 september 2015)
+    $tijden[$k] = date($timestamp, 'G:i'); // 17:15 (kwart over 5, 's middags)
+    
+    while($tm = $gebruikersmomenten->fetch_row()){
+        if($tm['timestamp'] == $timestamp){
+            $taakids[$timestamp][] = $tm;
+        }
+    }
+    $k++;
+}
+
+
+
+
+
+$rooster = array(
+    'Draaimolen' => array(
+        1 => 'Tim van Dijk',
+        2 => '',
+        3 => 'Max Windau',
+        4 => 'Max Windau',
+        5 => 'Tim van Dijk',
+        6 => 'Tom Janssen',
+        7 => 'Tom Janssen'
+    ),
+    
+    'Reuzenrad' => array(
+        1 => 'Tim van Dijk',
+        2 => '',
+        3 => 'Max Windau',
+        4 => 'Max Windau',
+        5 => 'Tim van Dijk',
+        6 => 'Tom Janssen',
+        7 => 'Tom Janssen'
+    )
+);
+
+
+
+?>
+                
                 <div class="col-sm-6">
                     <h3>Rooster</h3>
                 </div>
