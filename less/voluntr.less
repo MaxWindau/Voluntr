@@ -274,11 +274,47 @@ fieldset[disabled] .btn-header.active {
     color: white;
     background-color: darken(@brand-primary, 10%);
 }
+
+.rooster-tekort {
+    background-color:@brand-danger;
+}
+.rooster-ingevuld {
+    background-color:@brand-success;
+}
+.rooster-optie {
+    background-color: @brand-warning;
+}
+.rooster-nietnodig {
+    background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 7px,
+    #bbb 7px,
+    #bbb 14px
+    );
+    border: 1px solid #bbb;
+    height:18px;
+}
+.rooster-label {
+    font-weight:100 !important;
+    font-size:11px;
+    border-radius:3px;
+    color:white;
+    padding:2px 4px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 /**********/
 /* TABLES */
 /**********/
 
-td {
-    border-top: none !important;
-    width: 100%;
+td, th {
+    padding: 2px 20px 2px 0px;
+    min-width:200px;
+}
+table {
+    min-width:100%;
+    margin-bottom:10px;
 }

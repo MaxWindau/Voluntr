@@ -62,7 +62,7 @@ $page_file = 'bellen';
             <!-- HEADER START -->
             <div class="header">
                 <!-- Header LEFT -->
-                <div class="col-xs-12 col-sm-8">
+                <div class="col-xs-12 col-sm-9">
 
                     <h2 class="no-margin">
                         <i class="fa fa-puzzle-piece"></i>
@@ -75,7 +75,7 @@ $page_file = 'bellen';
                     </h2>
                     
                 </div>
-                <div class="col-xs-12 col-sm-4 right">
+                <div class="col-xs-12 col-sm-3 right">
                     <h2 class="no-margin">
                         <a class="btn btn-sm btn-header active"><img style="height:20px;margin-top:-2px;" src="img/silhouette-vierkant.png" class="img-circle" /> Max Windau <i class="fa fa-caret-down"></i></a>
                         
@@ -162,19 +162,101 @@ $page_file = 'bellen';
                     <a class="btn btn-lg btn-danger" style="width:100%;"><i class="fa fa-remove"></i> Neemt niet op</a>
                 </div>
 -->
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <h3>Rooster</h3>
                 </div>
-                <div class="col-sm-3 col-md-2">
-                    <label for="personenzoeken">Zoek naar personen:</label>
-                    <input type="text" id="personenzoeken" placeholder="bijv. Jan Jansen" class="input input-sm form-control" />
-                    <div style="height:10px;margin-top:15px;border-top:1px solid #888;"></div>
-                    <p>Jan Jansen<br />
-                    Tim van Dijk</p>
+                <div class="col-sm-6">
+                    <h3 style="text-align:right;">
+                        <span class="label label-success" style="font-size:13px;"><i class="fa fa-check"></i> 29 ingedeeld</span>
+                        <span class="label label-warning" style="font-size:13px;"><i class="fa fa-share-alt"></i> 14 opties</span>
+                        <span class="label label-danger" style="font-size:13px;"><i class="fa fa-warning"></i> 13 tekorten</span>
+                    </h3>
                 </div>
+                <div class="col-sm-12" style="overflow-y:auto;overflow-x:auto;">
+                    <table>
+                        <tr>
+                            <th>Taak</th>
+                            <th>16.00</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>17.00</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>18.00</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input input-sm form-control" placeholder="Zoek een taak" /></td>
+                            <td>.00</td>
+                            <td>.15</td>
+                            <td>.30</td>
+                            <td>.45</td>
+                            <td>.00</td>
+                            <td>.15</td>
+                            <td>.30</td>
+                            <td>.45</td>
+                            <td>.00</td>
+                            <td>.15</td>
+                            <td>.30</td>
+                            <td>.45</td>
+                        </tr>
 
-                <div class="col-sm-9 col-md-10" style="overflow-y:auto;overflow-x:auto;">
-                    
+                        <tr>
+                            <td>Luchtkussens</td>
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td colspan="2"><div class="rooster-label rooster-optie"><i class="fa fa-share-alt"></i></div></td>
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Noa Klaassen</div></td>
+
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td><div class="rooster-label rooster-optie"><i class="fa fa-share-alt"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td>Draaimolen</td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Noa Klaassen</div></td>
+
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td colspan="3"><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td><div class="rooster-label rooster-optie"><i class="fa fa-share-alt"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-nietnodig"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Informatiestand</td>
+                            <td colspan="2"><div class="rooster-label rooster-nietnodig"></div></td>
+
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Noa Klaassen</div></td>
+
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td colspan="3"><div class="rooster-label rooster-optie"><i class="fa fa-share-alt"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Janne de Voogd</div></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td>Verkeersregelaar (Singel)</td>
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td colspan="3"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Noa Klaassen</div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td><div class="rooster-label rooster-optie"><i class="fa fa-share-alt"></i></div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                            <td colspan="2"><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Suus van Gerwik</div></td>
+                            <td><div class="rooster-label rooster-ingevuld"><i class="fa fa-check"></i> Tim van Dijk</div></td>
+                            <td><div class="rooster-label rooster-tekort"><i class="fa fa-warning"></i></div></td>
+                        </tr>
+                    </table>
                 </div>
                 <!-- END TEST ENVIRONMENT -->
                 
