@@ -26,45 +26,46 @@ CREATE TABLE GebruikerTelefoon (
 
 CREATE TABLE Evenementen (
     evenementnaam   varchar(50)     NOT NULL,
+	evenementid 	int (10)		NOT NULL	AUTO_INCREMENT,
     locatie         varchar(80)     NOT NULL,
     begindatum      date            NOT NULL,
     einddatum       date            NOT NULL,
-    PRIMARY KEY(evenementnaam)
+    PRIMARY KEY(evenementid)
 );
 
 CREATE TABLE Inschrijving (
     id              int(20)            NOT NULL,
-    evenementnaam   varchar(50)     NOT NULL,
+    evenementid		int(10)     NOT NULL,
     type            varchar(20)     NOT NULL,
-    PRIMARY KEY(id),
+    PRIMARY KEY(id, evenementid),
     FOREIGN KEY (id) REFERENCES Gebruikers(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION,
-    CONSTRAINT checkLand CHECK (land IN ('Vrijwilliger', 'Organisator'))
+    FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION,
+    CONSTRAINT typecheck CHECK (type IN ('Vrijwilliger', 'Organisator'))
 );
 
 CREATE TABLE EvenementTaak (
-    evenementnaam   varchar(50)     NOT NULL,
+    evenementid   	int(10)     NOT NULL,
     taaknaam        varchar(80)     NOT NULL,
     moment          date            NOT NULL,
     aantal          smallint        NOT NULL,
-    PRIMARY KEY (evenementnaam, taaknaam, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION
+    PRIMARY KEY (evenementid, taaknaam, moment),
+    FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
 CREATE TABLE GebruikerBeschikbaar (
     id              int(10)         NOT NULL,
-    evenementnaam   varchar(50)     NOT NULL,
+    evenementid   	int(10)    		NOT NULL,
     moment          date            NOT NULL,
     PRIMARY KEY (id, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION
+    FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
 CREATE TABLE GebruikerTaak (
     id              int(10)         NOT NULL,
-    evenementnaam   varchar(50)     NOT NULL,
+    evenementid   int(10)     NOT NULL,
     taaknaam        varchar(80)     NOT NULL,
     moment          date            NOT NULL,
-    PRIMARY KEY (id, evenementnaam, moment),
-    FOREIGN KEY (evenementnaam) REFERENCES Evenementen(evenementnaam) ON UPDATE NO ACTION ON DELETE NO ACTION
+    PRIMARY KEY (id, evenementid, moment),
+    FOREIGN KEY (evenementid) REFERENCES Evenementen(evenementid) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
     
